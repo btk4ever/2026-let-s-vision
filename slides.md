@@ -404,60 +404,65 @@ layout: center
 
 ---
 layout: default
+clicks: 1
 ---
 
 # 约束一：有限的 Context vs 膨胀的任务
 
-<div class="mt-6 flex items-center gap-6">
+<div :class="[$clicks >= 1 ? 'mt-6' : 'mt-32', 'flex items-center gap-6 transition-all duration-700 ease-out']">
 
 <div class="flex-1 text-center p-5 rounded-xl border border-teal-200 bg-teal-50">
   <carbon-chip class="text-3xl text-teal-500 mb-2" />
   <div class="font-bold text-lg">模型 Context</div>
-  <div class="text-xs opacity-60 mt-1">上下文窗口、Token 预算</div>
+  <div class="text-sm opacity-60 mt-1">SOTA Model - 200~400k</div>
   <div class="text-2xl font-bold mt-2 text-teal-800">始终有限</div>
 </div>
 
-<div class="text-3xl opacity-30 flex-shrink-0">⇋</div>
+<carbon-arrows-horizontal class="text-3xl opacity-30 flex-shrink-0" />
 
 <div class="flex-1 text-center p-5 rounded-xl border border-gray-200 bg-gray-50">
   <carbon-task class="text-3xl text-gray-500 mb-2" />
   <div class="font-bold text-lg">实际任务</div>
-  <div class="text-xs opacity-60 mt-1">代码库、需求、约定、历史决策…</div>
+  <div class="text-sm opacity-60 mt-1">代码库、需求、约定、历史决策…</div>
   <div class="text-2xl font-bold mt-2 text-gray-800">不断膨胀</div>
 </div>
 
 </div>
 
-<div class="mt-6 grid grid-cols-3 gap-4">
-  <div class="p-3 rounded-lg bg-red-50 border border-red-100 text-center" v-click>
+<div :class="[$clicks >= 1 ? 'opacity-100' : 'opacity-0', 'transition-opacity duration-700 ease-out delay-300']">
+
+<div class="mt-5 text-sm opacity-50 text-center">1M 上下文不是万灵丹——塞得越多，问题越明显</div>
+
+<div class="mt-3 grid grid-cols-3 gap-4">
+  <div class="p-3 rounded-lg bg-red-50 border border-red-100 text-center">
     <carbon-finance class="text-xl text-red-400 mb-1" />
     <div class="text-sm font-bold text-red-800">推理成本飙升</div>
-    <div class="text-xs text-red-600 mt-1">Context 越长，耗时和费用急剧增长</div>
+    <div class="text-sm text-red-700 mt-1">Context 越长，耗时和费用急剧增长</div>
   </div>
-  <div class="p-3 rounded-lg bg-orange-50 border border-orange-100 text-center" v-click>
+  <div class="p-3 rounded-lg bg-orange-50 border border-orange-100 text-center">
     <carbon-search-locate class="text-xl text-orange-400 mb-1" />
     <div class="text-sm font-bold text-orange-800">Recall 成功率下降</div>
-    <div class="text-xs text-orange-600 mt-1">信息越多，关键内容越容易被淹没</div>
+    <div class="text-sm text-orange-700 mt-1">信息越多，关键内容越容易被淹没</div>
   </div>
-  <div class="p-3 rounded-lg bg-yellow-50 border border-yellow-100 text-center" v-click>
-    <carbon-view-off class="text-xl text-yellow-500 mb-1" />
-    <div class="text-sm font-bold text-yellow-800">注意力涣散</div>
-    <div class="text-xs text-yellow-600 mt-1">模型难以聚焦，输出质量不稳定</div>
+  <div class="p-3 rounded-lg bg-yellow-50 border border-yellow-100 text-center">
+    <carbon-view-off class="text-xl text-yellow-600 mb-1" />
+    <div class="text-sm font-bold text-yellow-900">注意力涣散</div>
+    <div class="text-sm text-yellow-800 mt-1">模型难以聚焦，输出质量不稳定</div>
   </div>
 </div>
 
+</div>
+
 <!--
-这一页讲清楚核心矛盾。
+模型的 Context 是有限的。目前主流 SOTA 模型的上下文窗口大概在 200K 到 400K token。
+而我们的实际任务呢？在一个大型项目里，往往牵扯多个模块和复杂的决策链路，要解决的问题只会越来越复杂。代码库在膨胀、需求在增加、历史决策在积累。
 
-一边是我们的实际任务——代码库在膨胀、需求在增加、历史决策在积累，信息量只会越来越大。
-另一边是模型的 Context 窗口——无论标称多大，它始终是有限的，而且不是越大越好。
+有人会说，不是有 1M 上下文的模型吗？但百万 token 并不是万灵丹。在我们的实际尝试中，往里面塞的东西越多，问题就越明显——
 
-当我们试图把更多信息塞进 Context 时，三个问题会同时恶化：
-1. 推理成本飙升——更长的上下文意味着更高的延迟和费用，这在大规模使用时非常痛。
-2. Recall 成功率下降——信息太多，模型找到关键内容的概率反而降低了，就像在噪音里找信号。
-3. 注意力涣散——模型的注意力被分散，输出质量变得不稳定，有时候好有时候差。
-
-这就是为什么"把所有东西都丢给 AI"行不通。我们需要像管理内存一样去管理 Context。
+[click]
+1. 推理成本飙升——上下文越长，延迟和费用急剧增长，attention 计算是二次方的。
+2. Recall 成功率下降——信息太多，关键内容反而被淹没。研究表明中间位置的信息 recall 可以下降超过 30%。
+3. 注意力涣散——模型的注意力被稀释，输出质量变得不稳定。Anthropic 自己都说过："往窗口里塞十万 token 的历史会削弱模型对真正重要内容的推理能力"。
 -->
 
 ---
