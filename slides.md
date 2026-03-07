@@ -339,23 +339,41 @@ AI 高使用占比趋势：先出现"高手飞轮"——
 layout: center
 ---
 
-<div class="text-center">
-  <div class="text-4xl font-bold mb-4">序章已经落下</div>
-  <div class="text-lg opacity-70 max-w-lg mx-auto leading-relaxed">
-    AI 能力增长超越摩尔定律，世界在加速变化
+<div class="flex flex-col items-center justify-center h-full">
+  <div class="text-6xl font-bold tracking-tight">序章已经落下</div>
+  <div class="w-24 h-1 bg-blue-500 rounded-full mt-6 mb-8"></div>
+
+  <div class="flex gap-2 w-full max-w-2xl" style="transform: scale(0.7); transform-origin: center;">
+    <TimelineStage label="Phase I" title="Tab 补全">AI 进入编码动作</TimelineStage>
+    <TimelineStage label="Phase II" title="Chatbot">同步提示-响应回路</TimelineStage>
+    <TimelineStage label="Phase III" title="AI Editor">仓内上下文协作</TimelineStage>
+    <TimelineStage label="Phase IV" title="Code Agent">长任务 / 少指令 / 自主</TimelineStage>
   </div>
-  <div class="mt-8 text-sm opacity-50">
-    不是"要不要用 AI"的问题，而是"如何用好"的问题
-  </div>
+
+  <v-click>
+    <div class="mt-8 flex gap-8 text-base tracking-wide">
+      <div class="flex items-start gap-2 opacity-60">
+        <carbon-view class="text-blue-500 mt-0.5 flex-shrink-0" />
+        <span>我们观察到的现象</span>
+      </div>
+      <div class="flex items-start gap-2 opacity-60">
+        <carbon-roadmap class="text-blue-500 mt-0.5 flex-shrink-0" />
+        <span>推进中遇到的阻力与对策</span>
+      </div>
+    </div>
+  </v-click>
 </div>
 
 <!--
-整体判断：序章已经落下。
+从 Tab 补全到 Chatbot，到 AI Editor，再到 Code Agent——这四个阶段是人类在尝试和 AI 共同编程时的阶段性成果。
 
-科技领域的 tick-tock 节奏在 AI 上被打破了——能力增长的速度超过了摩尔定律的预期。
-世界在加速变化，这不再是"要不要用 AI"的讨论，而是"如何用好"的工程问题。
+到今天，大方向已经确定下来了：大家基本认同 Code Agent 这种方式是比较理想的协作形态。围绕它，工具链、工作流、最佳实践都在快速成型。可以说，人类在这条科技树上已经点下去了。
 
-这意味着我们不能等着"AI 更好了再开始"，现在就需要建立工程化的方法。
+所以我说"序章已经落下"——不是结束，而是地基打好了。后面的章节，都将以这个序章为基础继续演化。
+
+（点击）接下来想跟大家分享两件事：
+一是我们在这个阶段观察到的一些现象——趋势数据背后的规律；
+二是团队和我个人在推进 AI 落地时遇到的真实阻力，以及我们尝试的对策。
 -->
 
 ---
