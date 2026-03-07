@@ -466,47 +466,116 @@ clicks: 1
 -->
 
 ---
-layout: default
+layout: center
 ---
 
-# 上下文的三个风险
+<div class="absolute inset-0 bg-white text-gray-900 overflow-hidden">
 
-<div class="mt-8 grid grid-cols-3 gap-6">
+<!-- Diagonal teal stripes background -->
+<div class="absolute inset-0 opacity-[0.04]" style="background: repeating-linear-gradient(-45deg, transparent, transparent 40px, #14b8a6 40px, #14b8a6 42px);"></div>
 
-<div class="text-center p-6 rounded-xl bg-red-50 border border-red-100" v-click>
-  <carbon-misuse class="text-3xl text-red-400 mb-3" />
-  <div class="font-bold text-red-800 mb-2">上下文漂移</div>
-  <div class="text-xs text-red-600 leading-relaxed">
-    对话过长后，模型注意力偏移，丢失早期关键信息
+<!-- Title -->
+<div class="absolute top-8 left-10 z-10">
+  <div class="text-xl font-black text-teal-600 tracking-widest" style="transform: skewX(-12deg);">CONTEXT PROBLEM</div>
+</div>
+<div class="absolute top-16 left-8 z-10">
+  <div class="text-4xl font-black leading-none" style="transform: skewX(-6deg);">
+    <span class="bg-teal-600 text-white px-4 py-1 inline-block">遇到这些</span>
+    <span class="text-gray-900 ml-2">你就知道</span>
+    <span class="bg-gray-900 text-white px-3 py-1 inline-block ml-1" style="transform: skewX(-5deg);">糟糕了</span>
   </div>
 </div>
 
-<div class="text-center p-6 rounded-xl bg-orange-50 border border-orange-100" v-click>
-  <carbon-unlink class="text-3xl text-orange-400 mb-3" />
-  <div class="font-bold text-orange-800 mb-2">跨 Session 断裂</div>
-  <div class="text-xs text-orange-600 leading-relaxed">
-    新会话无法继承上一次的上下文与决策链路
+<!-- Cards -->
+<div class="absolute top-40 left-6 right-6 space-y-4 z-10" style="perspective: 800px;">
+
+<div v-click class="slam-card">
+  <div class="relative" style="transform: skewX(-5deg) rotate(1.8deg);">
+    <div class="bg-teal-600 text-white px-5 py-4 text-xl font-black flex items-center gap-3" style="clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);">
+      <span class="text-teal-200 text-3xl">///</span>
+      <span>代码生成到一半，突然跳</span>
+      <span class="bg-white text-teal-700 px-2 py-0.5 text-lg font-mono inline-block" style="transform: skewX(8deg);">context compaction</span>
+    </div>
   </div>
 </div>
 
-<div class="text-center p-6 rounded-xl bg-yellow-50 border border-yellow-100" v-click>
-  <carbon-close-outline class="text-3xl text-yellow-500 mb-3" />
-  <div class="font-bold text-yellow-800 mb-2">关键决策丢失</div>
-  <div class="text-xs text-yellow-600 leading-relaxed">
-    "为什么这样做"的理由没有持久化，导致重复踩坑
+<div v-click class="slam-card">
+  <div class="relative" style="transform: skewX(-7deg) rotate(-1.2deg); margin-left: 2rem;">
+    <div class="bg-gray-900 text-white px-5 py-4 text-xl font-black flex items-center gap-3" style="clip-path: polygon(2% 0, 98% 0, 100% 100%, 0 100%);">
+      <span class="text-teal-400 text-3xl">///</span>
+      <span>你开始不停地说</span>
+      <span class="bg-white text-gray-900 px-2 py-0.5 text-lg inline-block" style="transform: skewX(8deg);">"这里不对，修一下"</span>
+    </div>
+  </div>
+</div>
+
+<div v-click class="slam-card">
+  <div class="relative" style="transform: skewX(-4deg) rotate(2.5deg); margin-left: 0.5rem;">
+    <div class="bg-teal-700 text-white px-5 py-4 text-xl font-black flex items-center gap-3" style="clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);">
+      <span class="text-teal-300 text-3xl">///</span>
+      <span>"求求你了别再动那个文件了，它和这次的问题不相关"</span>
+    </div>
+  </div>
+</div>
+
+<div v-click class="slam-card">
+  <div class="relative" style="transform: skewX(-8deg) rotate(-1.8deg); margin-left: 3rem;">
+    <div class="bg-gray-800 text-white px-5 py-4 text-2xl font-black flex items-center gap-3" style="clip-path: polygon(2% 0, 98% 0, 100% 100%, 0 100%);">
+      <span class="text-teal-400 text-4xl">!!!</span>
+      <span>"我们不是一开始就约好了么，你怎么又</span>
+      <span class="bg-teal-600 text-white px-2 py-0.5 inline-block" style="transform: skewX(12deg) rotate(-4deg);">...</span>
+    </div>
   </div>
 </div>
 
 </div>
+
+</div>
+
+<style>
+.slam-card {
+  transform-origin: center top;
+  transform: perspective(800px) rotateX(-90deg) translateY(-60px);
+  opacity: 0;
+  transition: none !important;
+}
+.slam-card:not(.slidev-vclick-hidden) {
+  animation: slamDown 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes slamDown {
+  0% {
+    transform: perspective(800px) rotateX(-90deg) translateY(-60px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    transform: perspective(800px) rotateX(6deg) translateY(4px);
+    opacity: 1;
+  }
+  85% {
+    transform: perspective(800px) rotateX(-2deg) translateY(-2px);
+  }
+  100% {
+    transform: perspective(800px) rotateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+</style>
 
 <!--
-约束一延伸：上下文的三个风险。
+这些都是我们在现场看到的、工程师们在使用 Agent 编码时非常常见的问题。
+很多人来找我们求助的时候，症状几乎一模一样。遇到这些，你就知道——上下文管理出了问题。
 
-1. 上下文漂移：对话太长后，模型注意力偏移，早期的关键信息可能被忽略。
-2. 跨 session 断裂：新的会话无法继承上一次的上下文与决策链路。每次重新解释太浪费。
-3. 关键决策丢失："为什么这样做"的理由没有被持久化，导致团队重复踩坑。
+（逐条点击）
+1. 比如说，哎，代码生成到一半，上下文满了，开始压缩。那跳这个基本意味着这次白干了，准备重新来过吧。
+2. 开始反复说"啊，这里不对修一下；那里不对修一下；还是不对修一下"——我们一般把这个叫做模型鬼打墙，出不去了。模型输出开始偏离预期，你不停地纠正，这就是 recall 下降和注意力涣散的直接体现。
+3. 你开始说"求求你了别再动那个文件"，或者你开始一些“针对代码的微操”——那基本上就是模型已经忘了哪些文件和当前任务无关，边界信息在上下文里丢了。
+4. "我们不是一开始就约好了么"..这种可能经常出现在言情剧里的台词——定义的架构约定、编码规范，到后面被模型"忘掉"了
 
-风险看清了，接下来看怎么做好上下文工程。
+这些不是偶发的，而是上下文有限这个根本约束带来的必然结果，也是阻碍我们的工程师日常使用的最大的几个问题。
+知道了问题在哪，接下来看怎么应对。
 -->
 
 ---
