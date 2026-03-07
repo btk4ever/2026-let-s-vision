@@ -393,125 +393,71 @@ layout: center
 <div class="mt-4 text-base opacity-50 text-center">每组话题：先看约束，再聊实践</div>
 
 <!--
-今天聊三组话题：上下文、积累、协作。
-每一组都是先讲约束（道），紧跟着讲落地方法（术）。
+我们在实践中遇到了非常非常多的课题。今天时间肯定是不够的，所以大概只能聊我认为最最重要的三组话题：
 
-最重要的变化：开发者正在从"写实现"转向"编排系统与验收结果"。
+1. 上下文工程——高效且正确地去管理和使用。把信息喂对、喂好，是第一个要解决的问题。
+2. 然后是团队化积累。把团队里大神和高手的做法推广沉淀。
+3. 最后是协作新范式——从人指挥一个 Agent，指挥多个 Agent，到最后理想中的 Agent 自协作的话题。
 
-避免工具横评；避免空泛预测。
+每组话题，我们先看约束在哪，再聊我们的实践和对策。
 -->
 
 ---
 layout: default
 ---
 
-# 三个约束，一个方向
+# 约束一：有限的 Context vs 膨胀的任务
 
-<div class="mt-6 grid grid-cols-2 gap-6">
+<div class="mt-6 flex items-center gap-6">
 
-<div>
-
-<KeyPoint title="Context = 内存" v-click>
-  <template #icon><carbon-chip class="text-2xl" /></template>
-  有限、紧张、需要预算
-</KeyPoint>
-
-<div class="h-4" />
-
-<KeyPoint title="Memory + Skill = 复利" v-click>
-  <template #icon><carbon-save class="text-2xl" /></template>
-  没有记忆，成功经验无法复用
-</KeyPoint>
-
-<div class="h-4" />
-
-<KeyPoint title="协作范式在变" v-click>
-  <template #icon><carbon-collaborate class="text-2xl" /></template>
-  从人指挥 agent 到 agent 自协作
-</KeyPoint>
-
+<div class="flex-1 text-center p-5 rounded-xl border border-teal-200 bg-teal-50">
+  <carbon-chip class="text-3xl text-teal-500 mb-2" />
+  <div class="font-bold text-lg">模型 Context</div>
+  <div class="text-xs opacity-60 mt-1">上下文窗口、Token 预算</div>
+  <div class="text-2xl font-bold mt-2 text-teal-800">始终有限</div>
 </div>
 
-<div class="flex items-center justify-center" v-click>
-<div class="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-100">
-  <div class="text-sm opacity-60 mb-2">方向</div>
-  <div class="text-xl font-bold text-teal-700">to-Human → to-Agent</div>
-  <div class="text-xs opacity-50 mt-2">人类要的是结果，不是软件操作过程</div>
-  <div class="text-xs opacity-40 mt-1">平台能力与权限审计成为新的竞争关键</div>
-</div>
+<div class="text-3xl opacity-30 flex-shrink-0">⇋</div>
+
+<div class="flex-1 text-center p-5 rounded-xl border border-gray-200 bg-gray-50">
+  <carbon-task class="text-3xl text-gray-500 mb-2" />
+  <div class="font-bold text-lg">实际任务</div>
+  <div class="text-xs opacity-60 mt-1">代码库、需求、约定、历史决策…</div>
+  <div class="text-2xl font-bold mt-2 text-gray-800">不断膨胀</div>
 </div>
 
 </div>
 
-<!--
-道的总览：三个约束 + 一个方向。
-
-三个约束：
-1. context = 内存：有限、紧张、需要预算
-2. memory + skill = 复利：没有记忆系统，成功经验无法跨任务复用
-3. 协作范式在变：从人指挥多 agent 到多 agent 自协作
-
-一个方向：to-Agent —— 人类要的是结果，不是软件操作过程。
-Agent 正在成为软件的新用户，平台能力与权限审计成为竞争关键。
-
-接下来一组一组看。先从上下文开始。
--->
-
----
-layout: new-section
----
-
-# 上下文
-
-Context = 有限内存
-
-<!--
-第一组：上下文。
-先看约束——上下文是最贵的资源；再看怎么做好上下文工程。
--->
-
----
-layout: default
----
-
-# 约束一：Context = 内存
-
-<div class="mt-6 flex items-center gap-8">
-<div class="flex-1">
-
-<v-clicks>
-
-- 上下文不是免费的聊天历史
-- 而是**有限、紧张、需要预算**的内存
-- 关键问题不是"喂多少"，而是"**喂什么、按什么顺序**"
-
-</v-clicks>
-
-<div class="mt-6 p-4 rounded-lg bg-amber-50 border border-amber-200" v-click>
-  <div class="text-sm font-semibold text-amber-800">
-    <carbon-warning class="inline mr-1" /> 瓶颈迁移
+<div class="mt-6 grid grid-cols-3 gap-4">
+  <div class="p-3 rounded-lg bg-red-50 border border-red-100 text-center" v-click>
+    <carbon-finance class="text-xl text-red-400 mb-1" />
+    <div class="text-sm font-bold text-red-800">推理成本飙升</div>
+    <div class="text-xs text-red-600 mt-1">Context 越长，耗时和费用急剧增长</div>
   </div>
-  <div class="text-xs text-amber-700 mt-1">
-    从"代码/文档同步"迁移到"上下文窗口 + 跨 session 连续性"
+  <div class="p-3 rounded-lg bg-orange-50 border border-orange-100 text-center" v-click>
+    <carbon-search-locate class="text-xl text-orange-400 mb-1" />
+    <div class="text-sm font-bold text-orange-800">Recall 成功率下降</div>
+    <div class="text-xs text-orange-600 mt-1">信息越多，关键内容越容易被淹没</div>
+  </div>
+  <div class="p-3 rounded-lg bg-yellow-50 border border-yellow-100 text-center" v-click>
+    <carbon-view-off class="text-xl text-yellow-500 mb-1" />
+    <div class="text-sm font-bold text-yellow-800">注意力涣散</div>
+    <div class="text-xs text-yellow-600 mt-1">模型难以聚焦，输出质量不稳定</div>
   </div>
 </div>
 
-</div>
-<div class="w-44 flex items-center justify-center">
-  <carbon-chip class="text-8xl text-teal-300 opacity-60" />
-</div>
-</div>
-
 <!--
-约束一深入。
+这一页讲清楚核心矛盾。
 
-在 agent 开发里，上下文是最贵的资源，不是免费的聊天历史。
-context 是有限、紧张、需要预算的内存。
+一边是我们的实际任务——代码库在膨胀、需求在增加、历史决策在积累，信息量只会越来越大。
+另一边是模型的 Context 窗口——无论标称多大，它始终是有限的，而且不是越大越好。
 
-关键问题不是"喂多少"，而是"喂什么、按什么顺序喂"。
-如何让 Agent 每次拿到正确上下文，处理正确尺寸的问题。
+当我们试图把更多信息塞进 Context 时，三个问题会同时恶化：
+1. 推理成本飙升——更长的上下文意味着更高的延迟和费用，这在大规模使用时非常痛。
+2. Recall 成功率下降——信息太多，模型找到关键内容的概率反而降低了，就像在噪音里找信号。
+3. 注意力涣散——模型的注意力被分散，输出质量变得不稳定，有时候好有时候差。
 
-软件工程瓶颈从"代码/文档同步"迁移到"上下文窗口 + 跨 session 连续性"。
+这就是为什么"把所有东西都丢给 AI"行不通。我们需要像管理内存一样去管理 Context。
 -->
 
 ---
