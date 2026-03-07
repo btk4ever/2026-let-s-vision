@@ -59,24 +59,24 @@
                C 780,362 870,325 940,270
                C 990,230 1025,175 1055,120
                C 1090,50 1120,10 1202,-40"
-            fill="none" stroke="#3b82f6" stroke-width="5" stroke-linecap="round" />
+            fill="none" stroke="#14b8a6" stroke-width="5" stroke-linecap="round" />
 
       <g class="marker-fade">
         <!-- Claude Code: 2025.2 → x≈760 -->
-        <circle cx="762" cy="364" r="6" fill="#3b82f6" />
-        <text x="740" y="351" text-anchor="end" fill="#3b82f6" font-size="7" font-weight="600">Claude Code</text>
+        <circle cx="762" cy="364" r="6" fill="#14b8a6" />
+        <text x="740" y="351" text-anchor="end" fill="#14b8a6" font-size="7" font-weight="600">Claude Code</text>
 
         <!-- Opus 4.5: 2025.11 → x≈1066 -->
-        <circle cx="1060" cy="110" r="6" fill="#3b82f6" />
-        <text x="1048" y="102" text-anchor="end" fill="#3b82f6" font-size="9" font-weight="600">Opus 4.5</text>
+        <circle cx="1060" cy="110" r="6" fill="#14b8a6" />
+        <text x="1048" y="102" text-anchor="end" fill="#14b8a6" font-size="9" font-weight="600">Opus 4.5</text>
 
         <!-- GPT-5.2 Codex: 2025.12 → x≈1100 -->
-        <circle cx="1100" cy="45" r="6" fill="#3b82f6" />
-        <text x="1088" y="37" text-anchor="end" fill="#3b82f6" font-size="9" font-weight="600">GPT-5.2 Codex</text>
+        <circle cx="1100" cy="45" r="6" fill="#14b8a6" />
+        <text x="1088" y="37" text-anchor="end" fill="#14b8a6" font-size="9" font-weight="600">GPT-5.2 Codex</text>
       </g>
 
       <text class="label-fade" x="1220" y="27" dominant-baseline="middle"
-            fill="#3b82f6" font-size="10" font-weight="600">模型能力</text>
+            fill="#14b8a6" font-size="10" font-weight="600">模型能力</text>
     </g>
 
     <!-- Gap highlight + bottleneck annotation (step 4) -->

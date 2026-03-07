@@ -17,8 +17,8 @@ defineProps({
 
 <style scoped>
 .stat-card {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  border: 1px solid #bae6fd;
+  background: linear-gradient(135deg, #f2faf8 0%, #e4f2ee 100%);
+  border: 1px solid #cde5df;
   border-radius: 16px;
   padding: 28px 24px;
   text-align: center;
@@ -27,19 +27,19 @@ defineProps({
 
 .stat-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.12);
+  box-shadow: 0 8px 20px rgba(20, 184, 166, 0.12);
 }
 
 .stat-icon {
   font-size: 28px;
-  color: #3b82f6;
+  color: #14b8a6;
   margin-bottom: 12px;
 }
 
 .stat-value {
   font-size: 36px;
   font-weight: 800;
-  color: #1e40af;
+  color: #115e59;
   line-height: 1.1;
   margin-bottom: 10px;
   letter-spacing: -0.02em;

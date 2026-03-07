@@ -104,8 +104,8 @@ layout: new-section
 
 <div class="flex justify-center">
 <div class="text-left space-y-3">
-<p class="!opacity-80 !text-3xl flex items-center"><carbon-map class="text-blue-400 mr-2 text-3xl flex-shrink-0" />我们是怎么走到今天这一步的？</p>
-<p class="!opacity-80 !text-3xl flex items-center"><carbon-compass class="text-blue-400 mr-2 text-3xl flex-shrink-0" />为今后的工程决策定坐标</p>
+<p class="!opacity-80 !text-3xl flex items-center"><carbon-map class="text-teal-400 mr-2 text-3xl flex-shrink-0" />我们是怎么走到今天这一步的？</p>
+<p class="!opacity-80 !text-3xl flex items-center"><carbon-compass class="text-teal-400 mr-2 text-3xl flex-shrink-0" />为今后的工程决策定坐标</p>
 </div>
 </div>
 
@@ -154,8 +154,8 @@ layout: default
   </div>
   <div v-click="4" class="absolute inset-0 flex items-center justify-center gap-5 transition-opacity duration-300">
     <span class="text-base opacity-50">2025 –</span>
-    <span class="px-4 py-1.5 bg-blue-50 rounded-md text-base text-blue-600 font-medium">Claude Code</span>
-    <span class="px-4 py-1.5 bg-blue-50 rounded-md text-base text-blue-600 font-medium">Codex</span>
+    <span class="px-4 py-1.5 bg-teal-50 rounded-md text-base text-teal-600 font-medium">Claude Code</span>
+    <span class="px-4 py-1.5 bg-teal-50 rounded-md text-base text-teal-600 font-medium">Codex</span>
   </div>
 </div>
 
@@ -199,7 +199,7 @@ clicks: 4
 layout: new-section
 ---
 
-# <carbon-chart-line-smooth class="inline text-blue-400 mr-2" /> 趋势汇报
+# <carbon-chart-line-smooth class="inline text-teal-400 mr-2" /> 趋势汇报
 
 <div class="mt-4 text-3xl opacity-70">
 一个大型 iOS 开发团队的变化实例
@@ -256,7 +256,7 @@ layout: default
 layout: default
 ---
 
-# PR 趋势 <carbon-chart-line class="inline text-blue-500" />
+# PR 趋势 <carbon-chart-line class="inline text-teal-500" />
 
 <div class="mt-6 flex items-center gap-8">
 <div class="flex-1">
@@ -270,7 +270,7 @@ layout: default
 </v-clicks>
 
 </div>
-<div class="w-80 h-48 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 flex items-center justify-center">
+<div class="w-80 h-48 rounded-xl bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-100 flex items-center justify-center">
   <div class="text-sm opacity-40">[PR Trend Chart]</div>
 </div>
 </div>
@@ -341,7 +341,7 @@ layout: center
 
 <div class="flex flex-col items-center justify-center h-full">
   <div class="text-6xl font-bold tracking-tight">序章已经落下</div>
-  <div class="w-24 h-1 bg-blue-500 rounded-full mt-6 mb-8"></div>
+  <div class="w-24 h-1 bg-teal-500 rounded-full mt-6 mb-8"></div>
 
   <div class="flex gap-2 w-full max-w-2xl" style="transform: scale(0.7); transform-origin: center;">
     <TimelineStage label="Phase I" title="Tab 补全">AI 进入编码动作</TimelineStage>
@@ -353,11 +353,11 @@ layout: center
   <v-click>
     <div class="mt-8 flex gap-8 text-base tracking-wide">
       <div class="flex items-start gap-2 opacity-60">
-        <carbon-view class="text-blue-500 mt-0.5 flex-shrink-0" />
+        <carbon-view class="text-teal-500 mt-0.5 flex-shrink-0" />
         <span>我们观察到的现象</span>
       </div>
       <div class="flex items-start gap-2 opacity-60">
-        <carbon-roadmap class="text-blue-500 mt-0.5 flex-shrink-0" />
+        <carbon-roadmap class="text-teal-500 mt-0.5 flex-shrink-0" />
         <span>推进中遇到的阻力与对策</span>
       </div>
     </div>
@@ -382,13 +382,15 @@ layout: center
 
 # 今天的话题
 
-<div class="mt-8 text-2xl text-center leading-relaxed">
+<img src="/topic-overview.png" class="w-full mt-4" />
 
-**上下文** · **积累** · **协作**
-
-<div class="my-4 text-base opacity-50">每个约束，讲完道，立刻落术</div>
-
+<div class="mt-2 grid grid-cols-3 text-center text-2xl font-bold">
+  <div>上下文工程</div>
+  <div class="translate-x-2">团队化积累</div>
+  <div class="-translate-x-6">协作新范式</div>
 </div>
+
+<div class="mt-4 text-base opacity-50 text-center">每组话题：先看约束，再聊实践</div>
 
 <!--
 今天聊三组话题：上下文、积累、协作。
@@ -431,9 +433,9 @@ layout: default
 </div>
 
 <div class="flex items-center justify-center" v-click>
-<div class="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100">
+<div class="text-center p-8 rounded-2xl bg-gradient-to-br from-teal-50 to-teal-50 border border-teal-100">
   <div class="text-sm opacity-60 mb-2">方向</div>
-  <div class="text-xl font-bold text-blue-700">to-Human → to-Agent</div>
+  <div class="text-xl font-bold text-teal-700">to-Human → to-Agent</div>
   <div class="text-xs opacity-50 mt-2">人类要的是结果，不是软件操作过程</div>
   <div class="text-xs opacity-40 mt-1">平台能力与权限审计成为新的竞争关键</div>
 </div>
@@ -496,7 +498,7 @@ layout: default
 
 </div>
 <div class="w-44 flex items-center justify-center">
-  <carbon-chip class="text-8xl text-blue-300 opacity-60" />
+  <carbon-chip class="text-8xl text-teal-300 opacity-60" />
 </div>
 </div>
 
@@ -567,7 +569,7 @@ layout: default
 <div class="grid grid-cols-2 gap-6">
 <div>
 
-### 可控注入源 <carbon-document-import class="inline text-blue-500" />
+### 可控注入源 <carbon-document-import class="inline text-teal-500" />
 
 <v-clicks>
 
@@ -617,19 +619,19 @@ layout: center
 <div class="text-center">
   <div class="text-lg opacity-60 mb-4">模型注意力分布</div>
   <div class="flex items-end justify-center gap-1 h-32">
-    <div class="w-8 bg-blue-500 rounded-t" style="height: 90%"></div>
-    <div class="w-8 bg-blue-400 rounded-t" style="height: 75%"></div>
-    <div class="w-8 bg-blue-300 rounded-t" style="height: 50%"></div>
-    <div class="w-8 bg-blue-200 rounded-t" style="height: 35%"></div>
+    <div class="w-8 bg-teal-500 rounded-t" style="height: 90%"></div>
+    <div class="w-8 bg-teal-400 rounded-t" style="height: 75%"></div>
+    <div class="w-8 bg-teal-300 rounded-t" style="height: 50%"></div>
+    <div class="w-8 bg-teal-200 rounded-t" style="height: 35%"></div>
     <div class="w-8 bg-gray-200 rounded-t" style="height: 25%"></div>
     <div class="w-8 bg-gray-200 rounded-t" style="height: 20%"></div>
     <div class="w-8 bg-gray-200 rounded-t" style="height: 18%"></div>
     <div class="w-8 bg-gray-200 rounded-t" style="height: 20%"></div>
     <div class="w-8 bg-gray-200 rounded-t" style="height: 25%"></div>
-    <div class="w-8 bg-blue-200 rounded-t" style="height: 35%"></div>
-    <div class="w-8 bg-blue-300 rounded-t" style="height: 55%"></div>
-    <div class="w-8 bg-blue-400 rounded-t" style="height: 70%"></div>
-    <div class="w-8 bg-blue-500 rounded-t" style="height: 85%"></div>
+    <div class="w-8 bg-teal-200 rounded-t" style="height: 35%"></div>
+    <div class="w-8 bg-teal-300 rounded-t" style="height: 55%"></div>
+    <div class="w-8 bg-teal-400 rounded-t" style="height: 70%"></div>
+    <div class="w-8 bg-teal-500 rounded-t" style="height: 85%"></div>
   </div>
   <div class="flex justify-between text-xs opacity-50 mt-2 px-4 max-w-sm mx-auto">
     <span>开头（强）</span>
@@ -676,7 +678,7 @@ layout: default
 <div class="mt-6 grid grid-cols-2 gap-6">
 <div>
 
-### 个人 Memory <carbon-user class="inline text-blue-500" />
+### 个人 Memory <carbon-user class="inline text-teal-500" />
 
 <v-clicks>
 
@@ -689,7 +691,7 @@ layout: default
 </div>
 <div>
 
-### 团队 Memory <carbon-group class="inline text-blue-500" />
+### 团队 Memory <carbon-group class="inline text-teal-500" />
 
 <v-clicks>
 
@@ -748,7 +750,7 @@ layout: default
 
 </div>
 <div class="w-48 flex flex-col items-center gap-3">
-  <div class="px-4 py-2 rounded-lg bg-blue-100 text-blue-800 text-sm font-bold">
+  <div class="px-4 py-2 rounded-lg bg-teal-100 text-teal-800 text-sm font-bold">
     <carbon-events class="inline mr-1" /> 少数高手
   </div>
   <carbon-arrow-down class="text-xl text-gray-400" />
@@ -836,7 +838,7 @@ layout: default
 <div class="text-base mb-6">每次成功都可以沉淀为可复用路径</div>
 
 <div class="flex items-center justify-center gap-4 mb-8" v-click>
-  <div class="px-4 py-2 rounded-lg bg-blue-100 text-blue-800 text-sm font-semibold">
+  <div class="px-4 py-2 rounded-lg bg-teal-100 text-teal-800 text-sm font-semibold">
     一次成功
   </div>
   <carbon-arrow-right class="text-xl text-gray-400" />
@@ -855,7 +857,7 @@ layout: default
 
 <div class="grid grid-cols-4 gap-3" v-click>
 <div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-template class="text-xl text-blue-500 mb-1" />
+  <carbon-template class="text-xl text-teal-500 mb-1" />
   <div class="font-bold">模板</div>
 </div>
 <div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
@@ -914,7 +916,7 @@ layout: default
 <div class="p-6 rounded-xl bg-gray-50 border border-gray-200 text-center" v-click>
   <div class="text-sm opacity-60 mb-2">当前</div>
   <div class="text-lg font-bold mb-3">人 → 多 Agent</div>
-  <carbon-user class="text-2xl text-blue-500 mx-1" />
+  <carbon-user class="text-2xl text-teal-500 mx-1" />
   <carbon-arrow-right class="text-xl text-gray-400 mx-1" />
   <carbon-bot class="text-2xl text-gray-500 mx-1" />
   <carbon-bot class="text-2xl text-gray-500 mx-1" />
@@ -922,15 +924,15 @@ layout: default
   <div class="text-xs opacity-50 mt-3">人工编排，注意力是瓶颈</div>
 </div>
 
-<div class="p-6 rounded-xl bg-blue-50 border border-blue-200 text-center" v-click>
-  <div class="text-sm text-blue-600 mb-2">下一阶段</div>
-  <div class="text-lg font-bold text-blue-800 mb-3">Agent ↔ Agent</div>
-  <carbon-bot class="text-2xl text-blue-500 mx-1" />
-  <carbon-connect class="text-xl text-blue-400 mx-1" />
-  <carbon-bot class="text-2xl text-blue-500 mx-1" />
-  <carbon-connect class="text-xl text-blue-400 mx-1" />
-  <carbon-bot class="text-2xl text-blue-500 mx-1" />
-  <div class="text-xs text-blue-600 mt-3">自协作，人做策略与兜底</div>
+<div class="p-6 rounded-xl bg-teal-50 border border-teal-200 text-center" v-click>
+  <div class="text-sm text-teal-600 mb-2">下一阶段</div>
+  <div class="text-lg font-bold text-teal-800 mb-3">Agent ↔ Agent</div>
+  <carbon-bot class="text-2xl text-teal-500 mx-1" />
+  <carbon-connect class="text-xl text-teal-400 mx-1" />
+  <carbon-bot class="text-2xl text-teal-500 mx-1" />
+  <carbon-connect class="text-xl text-teal-400 mx-1" />
+  <carbon-bot class="text-2xl text-teal-500 mx-1" />
+  <div class="text-xs text-teal-600 mt-3">自协作，人做策略与兜底</div>
 </div>
 </div>
 
@@ -965,10 +967,10 @@ layout: default
     <carbon-view class="inline mr-1 text-gray-600" /> 人工监督
   </div>
   <div class="flex flex-col items-center">
-    <carbon-arrow-right class="text-3xl text-blue-500" />
-    <div class="text-xs text-blue-600 font-semibold mt-1">关键跨越</div>
+    <carbon-arrow-right class="text-3xl text-teal-500" />
+    <div class="text-xs text-teal-600 font-semibold mt-1">关键跨越</div>
   </div>
-  <div class="px-5 py-3 rounded-xl bg-blue-600 text-white font-bold">
+  <div class="px-5 py-3 rounded-xl bg-teal-600 text-white font-bold">
     <carbon-workflow-automation class="inline mr-1" /> 无人职守
   </div>
 </div>
@@ -1023,7 +1025,7 @@ layout: default
 
 <div class="grid grid-cols-4 gap-4" v-click>
 <div class="p-4 rounded-xl bg-gray-50 border border-gray-200 text-center">
-  <carbon-pull-request class="text-2xl text-blue-500 mb-2" />
+  <carbon-pull-request class="text-2xl text-teal-500 mb-2" />
   <div class="text-sm font-bold">PR</div>
 </div>
 <div class="p-4 rounded-xl bg-gray-50 border border-gray-200 text-center">
@@ -1040,11 +1042,11 @@ layout: default
 </div>
 </div>
 
-<div class="mt-6 p-4 rounded-lg bg-blue-50 border border-blue-100" v-click>
-  <div class="text-sm font-semibold text-blue-800 mb-1">
+<div class="mt-6 p-4 rounded-lg bg-teal-50 border border-teal-100" v-click>
+  <div class="text-sm font-semibold text-teal-800 mb-1">
     <carbon-transform-instructions class="inline mr-1" /> 角色转变
   </div>
-  <div class="text-xs text-blue-700">
+  <div class="text-xs text-teal-700">
     工程师从"亲自实现者"转向"任务编排 + 质量守门"
   </div>
 </div>
@@ -1081,10 +1083,10 @@ layout: default
   <div class="text-xs text-green-600 mt-1">单元 / 集成 / UI</div>
 </div>
 
-<div class="p-4 rounded-xl border border-blue-200 bg-blue-50" v-click>
-  <carbon-catalog class="text-xl text-blue-600 mb-2" />
-  <div class="text-sm font-bold text-blue-800">日志</div>
-  <div class="text-xs text-blue-600 mt-1">行为链路可追溯</div>
+<div class="p-4 rounded-xl border border-teal-200 bg-teal-50" v-click>
+  <carbon-catalog class="text-xl text-teal-600 mb-2" />
+  <div class="text-sm font-bold text-teal-800">日志</div>
+  <div class="text-xs text-teal-600 mt-1">行为链路可追溯</div>
 </div>
 
 <div class="p-4 rounded-xl border border-orange-200 bg-orange-50" v-click>
@@ -1238,8 +1240,8 @@ layout: default
 <div class="mt-4 text-sm opacity-70 mb-6">多语言、多模块、超大仓库 —— 单 agent 很难稳定覆盖</div>
 
 <div class="flex items-center justify-center gap-3 mt-4" v-click>
-  <div class="p-4 rounded-xl bg-blue-50 border border-blue-200 text-center w-36">
-    <carbon-search class="text-2xl text-blue-600 mb-2" />
+  <div class="p-4 rounded-xl bg-teal-50 border border-teal-200 text-center w-36">
+    <carbon-search class="text-2xl text-teal-600 mb-2" />
     <div class="text-sm font-bold">检索 Agent</div>
     <div class="text-xs opacity-60">定位相关代码</div>
   </div>
@@ -1288,9 +1290,9 @@ layout: default
 
 <div class="mt-6 grid grid-cols-3 gap-5">
 
-<div class="p-5 rounded-xl bg-blue-50 border border-blue-100 text-center" v-click>
-  <carbon-increase-level class="text-3xl text-blue-600 mb-3" />
-  <div class="font-bold text-blue-800 mb-2">并行度提升</div>
+<div class="p-5 rounded-xl bg-teal-50 border border-teal-100 text-center" v-click>
+  <carbon-increase-level class="text-3xl text-teal-600 mb-3" />
+  <div class="font-bold text-teal-800 mb-2">并行度提升</div>
   <div class="text-xs opacity-60 leading-relaxed">
     多个 agent 并行工作，突破单 agent 的上下文瓶颈
   </div>
@@ -1354,7 +1356,7 @@ layout: default
     <div class="text-sm"><strong>最小复现</strong>：构建隔离环境复现问题</div>
   </div>
   <div class="flex items-center gap-3 p-3 rounded-lg bg-gray-50 border" v-click>
-    <div class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs font-bold">3</div>
+    <div class="w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center text-xs font-bold">3</div>
     <div class="text-sm"><strong>Agent 介入</strong>：定位 / 复现 / 验证</div>
   </div>
   <div class="flex items-center gap-3 p-3 rounded-lg bg-gray-50 border" v-click>
@@ -1403,9 +1405,9 @@ layout: default
 
 <carbon-arrow-right class="text-2xl text-gray-400" v-click />
 
-<div class="text-center p-6 rounded-2xl bg-gradient-to-b from-blue-50 to-blue-100 border border-blue-200 w-48" v-click>
-  <carbon-save class="text-3xl text-blue-600 mb-3" />
-  <div class="font-bold text-blue-800">资产沉淀</div>
+<div class="text-center p-6 rounded-2xl bg-gradient-to-b from-teal-50 to-teal-100 border border-teal-200 w-48" v-click>
+  <carbon-save class="text-3xl text-teal-600 mb-3" />
+  <div class="font-bold text-teal-800">资产沉淀</div>
   <div class="text-xs opacity-60 mt-2">复现工程 / 规避策略 / 团队记录</div>
 </div>
 
@@ -1446,10 +1448,10 @@ layout: default
 
 <div class="mt-8 grid gap-4 max-w-2xl mx-auto">
 
-<div v-click class="flex items-center gap-4 p-4 rounded-xl bg-blue-50 border border-blue-100">
-<carbon-data-definition class="text-2xl text-blue-600 flex-shrink-0" />
+<div v-click class="flex items-center gap-4 p-4 rounded-xl bg-teal-50 border border-teal-100">
+<carbon-data-definition class="text-2xl text-teal-600 flex-shrink-0" />
 <div>
-<div class="font-bold text-blue-800">把问题讲清楚</div>
+<div class="font-bold text-teal-800">把问题讲清楚</div>
 <div class="text-xs opacity-60">定义、约束、验收</div>
 </div>
 </div>

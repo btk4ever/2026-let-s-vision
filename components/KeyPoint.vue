@@ -24,7 +24,7 @@ defineProps({
   padding: 16px 20px;
   border-radius: 10px;
   background: rgba(241, 245, 249, 0.6);
-  border-left: 3px solid #3b82f6;
+  border-left: 3px solid #14b8a6;
   transition: background 0.2s ease;
 }
 
@@ -34,7 +34,7 @@ defineProps({
 
 .kp-icon {
   font-size: 24px;
-  color: #3b82f6;
+  color: #14b8a6;
   flex-shrink: 0;
   margin-top: 2px;
 }

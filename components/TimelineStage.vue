@@ -53,8 +53,8 @@ defineProps({
 }
 
 .timeline-stage.active .stage-dot {
-  background: #3b82f6;
-  border-color: #bfdbfe;
+  background: #14b8a6;
+  border-color: #99f6e4;
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
 }
 
@@ -73,7 +73,7 @@ defineProps({
 }
 
 .timeline-stage.active .stage-label {
-  color: #3b82f6;
+  color: #14b8a6;
 }
 
 .stage-title {
