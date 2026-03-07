@@ -582,54 +582,112 @@ layout: center
 layout: default
 ---
 
-# 上下文工程
+# 上下文工程：精简注入 <carbon-clean class="inline text-teal-500" />
 
-<div class="mt-4 text-base mb-6">效果差异来自上下文与执行容器，不来自提示词技巧</div>
+<div class="mt-2 text-base text-gray-500 mb-6">只给模型它真正需要的</div>
 
-<div class="grid grid-cols-2 gap-6">
-<div>
-
-### 可控注入源 <carbon-document-import class="inline text-teal-500" />
-
-<v-clicks>
-
-- README / 架构图
-- 关键文件清单
-- 约束清单（CLAUDE.md / AGENTS.md）
-- 保持**精确精简**，只提项目领域知识
-
-</v-clicks>
-
+<div class="grid grid-cols-3 gap-5 mt-4">
+<div class="p-5 rounded-lg bg-teal-50 border border-teal-100" v-click>
+  <carbon-document class="text-3xl text-teal-500 mb-3" />
+  <div class="font-bold text-lg">AGENTS.md 极简化</div>
+  <div class="text-sm text-gray-500 mt-2">≤ 100 行，只写领域知识</div>
+  <div class="text-sm text-gray-500 mt-1">行为式引用 · 渐进式披露</div>
 </div>
-<div>
-
-### 注意事项 <carbon-warning class="inline text-orange-500" />
-
-<v-clicks>
-
-- 无关历史会**污染**模型注意力
-- 模型注意力分布：开头 + 最近 > 中段
-- 工程上下文与聊天历史要隔离
-- 过度省成本选低质量模型 → **错误学习**
-
-</v-clicks>
-
+<div class="p-5 rounded-lg bg-teal-50 border border-teal-100" v-click>
+  <carbon-terminal class="text-3xl text-teal-500 mb-3" />
+  <div class="font-bold text-lg">辅助脚本和工具</div>
+  <div class="text-sm text-gray-500 mt-2">模块和架构查找</div>
+  <div class="text-sm text-gray-500 mt-1">简化输出，如 xcsift</div>
+</div>
+<div class="p-5 rounded-lg bg-teal-50 border border-teal-100" v-click>
+  <carbon-machine-learning-model class="text-3xl text-teal-500 mb-3" />
+  <div class="font-bold text-lg">选择顶级模型</div>
+  <div class="text-sm text-gray-500 mt-2">推理密集 ≠ 省 token 的地方</div>
+  <div class="text-sm text-gray-500 mt-1">弱模型 → 错误积累 → 返工</div>
 </div>
 </div>
 
 <!--
-上下文工程：从道到术。
+知道了问题在哪，来看怎么应对。首先是"精简注入"——只给模型必要的信息。
 
-核心观点：效果差异主要来自上下文与执行容器，不来自提示词技巧。
+（点击卡片 1）
+AGENTS.md 或者 CLAUDE.md，很多人恨不得往里塞成百上千行。但实际上，这些只是辅助，很可能你发现庞大的指导文件还不如没有指导文件。所以我们的实践是：
+- 控制在 100 行左右，只写领域知识——就是你项目里独有的东西，而不是"请写好代码"或者源码在“Source文件夹”这类通识
+- 关键文件清单和命令不要单纯列出来，要用行为式引用："如果你要改认证模块，必须先读 auth/README.md"
+- 渐进式披露，让模型按需去找更详细的信息，而不是一次全塞进去
 
-可控注入源优先：
-- README、架构图、关键文件、约束清单
-- CLAUDE.md / AGENTS.md 等保持精确精简，只提项目领域知识而不要提通识
+（点击卡片 2）
+第二个是辅助脚本。Agent 在大型项目里最浪费上下文的操作就是"找东西"和“读东西”。它会 grep、会 find、会反复读文件，这些全都消耗上下文。所以我们会准备专门的脚本——模块查找、架构信息速查，让 agent 一步到位，不要盲目搜索。另外，对于输出，寻找专门为 agent 优化的工具。
 
-注意事项：
-- 无关聊天历史会污染上下文，应与工程上下文隔离
-- 模型注意力常见分布：开头部分和最近部分较强，中间部分是衰减区
-- 过度为省钱选择低质量模型，常会导致"学到错误教训"，长期更贵
+（点击卡片 3）
+第三个，选模型别省钱。Agent 编码需要高度的智能，弱模型会产生的错误需要你要花时间纠正，纠正本身又消耗上下文，上下文不足叠加模型能力，导致更多错误，形成恶性循环。省下的费用远不如省下的人力成本。
+-->
+
+---
+layout: default
+clicks: 2
+---
+
+# 上下文工程：控制边界 <carbon-cut class="inline text-teal-500" />
+
+<div class="mt-2 text-base text-gray-500 mb-6">隔离、拆分、保持上下文干净</div>
+
+<div class="mt-4 flex items-center gap-4" v-click="1">
+
+<div class="w-28 text-center p-4 rounded-lg border border-red-200 bg-red-50">
+  <carbon-task-asset-view class="text-3xl text-red-400 mb-2" />
+  <div class="font-bold">大型任务</div>
+  <div class="text-sm text-gray-500">跨模块 · 多文件</div>
+</div>
+
+<carbon-arrow-right class="text-3xl text-teal-400 flex-shrink-0" />
+
+<div class="flex-1 text-center p-5 rounded-lg border-2 border-teal-300 bg-teal-50">
+  <carbon-cut class="text-3xl text-teal-500 mb-2" />
+  <div class="font-bold text-lg">拆分为中等任务</div>
+  <div class="text-sm text-gray-500">每个 ≤ 1 context window</div>
+</div>
+
+<carbon-arrow-right class="text-3xl text-teal-400 flex-shrink-0" />
+
+<div class="w-28 text-center p-4 rounded-lg border border-teal-200 bg-teal-50">
+  <carbon-checkmark-outline class="text-3xl text-teal-500 mb-2" />
+  <div class="font-bold">逐个交付</div>
+  <div class="text-sm text-gray-500">合并验收</div>
+</div>
+
+</div>
+
+<div :class="[$clicks >= 2 ? 'opacity-100' : 'opacity-0', 'transition-opacity duration-500']">
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="p-4 rounded-lg bg-teal-50 border border-teal-100 text-center">
+  <div class="font-bold"><carbon-bot class="inline text-teal-500 mr-1" />Sub-agent 协作</div>
+  <div class="text-sm text-gray-500 mt-1">有帮助，但合理拆分 > 堆 agent</div>
+</div>
+<div class="p-4 rounded-lg bg-teal-50 border border-teal-100 text-center">
+  <div class="font-bold"><carbon-renew class="inline text-teal-500 mr-1" />新开 Thread</div>
+  <div class="text-sm text-gray-500 mt-1">一个任务一个线程，避免历史污染</div>
+</div>
+</div>
+</div>
+
+<!--
+第二组实践：控制边界。
+
+LLM 擅长中小型任务。
+
+（点击流程图）
+最重要的一条：任务拆分，上下文压缩几乎是致命的，不要指望在压缩后还能完美解决问题。我给一个非常简单的判断标准——如果一个任务超过一个 context window 还搞不定，那它就是"大型任务"，必须拆。
+
+拆成什么样？每个子任务应该在一个 context window 内能完成。明确边界和依赖关系，分别执行，最后合并。你可以使用一些 loop 的手段，然后把调查系的任务的结论当作提示词的一部分注入给负责实现的 agent。
+
+[click]
+
+（Sub-agent）
+很多人会问 sub-agent 或者 agent team 有没有用？有用。但是使用它们一方面依赖工具链的能力，你难以完全控制。二是它们的前提是你先把agent定义好，把任务拆好了。如果任务本身边界不清，丢给再多 agent 也是乱的。关键还是在于合理的拆分。
+
+（新开 Thread）
+最后一个很容易被忽略的实践：多多新开 thread。很多人习惯在一个对话里连续做好几个任务，但前面任务的历史会污染后面任务的注意力。完成一个任务，开一个新线程，保持干净的上下文。成本很低，效果很好，避免很多问题。
 -->
 
 ---
@@ -637,43 +695,50 @@ layout: center
 ---
 
 <div class="text-center">
-  <div class="text-lg opacity-60 mb-4">模型注意力分布</div>
-  <div class="flex items-end justify-center gap-1 h-32">
-    <div class="w-8 bg-teal-500 rounded-t" style="height: 90%"></div>
-    <div class="w-8 bg-teal-400 rounded-t" style="height: 75%"></div>
-    <div class="w-8 bg-teal-300 rounded-t" style="height: 50%"></div>
-    <div class="w-8 bg-teal-200 rounded-t" style="height: 35%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 25%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 20%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 18%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 20%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 25%"></div>
-    <div class="w-8 bg-teal-200 rounded-t" style="height: 35%"></div>
-    <div class="w-8 bg-teal-300 rounded-t" style="height: 55%"></div>
-    <div class="w-8 bg-teal-400 rounded-t" style="height: 70%"></div>
-    <div class="w-8 bg-teal-500 rounded-t" style="height: 85%"></div>
+  <div class="text-2xl text-gray-500 mb-8">模型注意力分布</div>
+  <div class="flex items-end justify-center gap-2 h-52">
+    <div class="w-12 bg-teal-500 rounded-t" style="height: 90%"></div>
+    <div class="w-12 bg-teal-400 rounded-t" style="height: 75%"></div>
+    <div class="w-12 bg-teal-300 rounded-t" style="height: 50%"></div>
+    <div class="w-12 bg-teal-200 rounded-t" style="height: 35%"></div>
+    <div class="w-12 bg-gray-200 rounded-t" style="height: 25%"></div>
+    <div class="w-12 bg-gray-200 rounded-t" style="height: 20%"></div>
+    <div class="w-12 bg-gray-200 rounded-t" style="height: 18%"></div>
+    <div class="w-12 bg-gray-200 rounded-t" style="height: 20%"></div>
+    <div class="w-12 bg-gray-200 rounded-t" style="height: 25%"></div>
+    <div class="w-12 bg-teal-200 rounded-t" style="height: 35%"></div>
+    <div class="w-12 bg-teal-300 rounded-t" style="height: 55%"></div>
+    <div class="w-12 bg-teal-400 rounded-t" style="height: 70%"></div>
+    <div class="w-12 bg-teal-500 rounded-t" style="height: 85%"></div>
   </div>
-  <div class="flex justify-between text-xs opacity-50 mt-2 px-4 max-w-sm mx-auto">
+  <div class="flex justify-between text-base text-gray-500 mt-4 px-2 max-w-lg mx-auto">
     <span>开头（强）</span>
     <span>中段（弱）</span>
     <span>最近（强）</span>
   </div>
-  <div class="mt-6 text-sm opacity-60">
-    把关键信息放在<strong>开头和最近位置</strong>，避免埋在中段
+  <div class="mt-8 text-xl">
+    精简注入 + 控制边界 → 关键信息始终在<strong class="text-teal-600">注意力高位</strong>
+  </div>
+  <div class="mt-4 text-base text-gray-400">
+    像管理早期移动设备的内存一样，去管理你的 Context
   </div>
 </div>
 
 <!--
-注意力与污染。
+为什么前面两页的实践有效？其实原因还是模型的注意力分布，
+是呈现一个很典型的 U 型曲线：和人很像，
+开头和最近的内容获得强注意力，中段是衰减区。
 
-模型注意力常见分布：开头和最近的内容获得更强注意力，中段容易衰减。
-这意味着：
-- 关键约束和规则应该放在上下文的开头
-- 当前任务描述放在最近的位置
-- 避免把重要信息埋在长对话的中间
+所以我们前面做的所有事情，本质上就是：
+- 精简注入：AGENTS.md 里的规则放在开头，模型一开始就能看到
+- 控制边界：保持上下文短而干净，避免关键信息被挤到中段的衰减区
+- 新开 thread：每次都让任务描述处于"最近"的高注意力位置
 
-实际操作：定期清理上下文，把核心信息重新注入。
-上下文的道和术讲完了，接下来进入第二组：积累。
+这就是上下文工程的核心——不是写更好的提示词，而是管理好信息在上下文中的位置和密度。
+
+作为移动开发者，我们对这件事其实并不陌生。管理 context 就要像开发早期移动 App 那样去珍惜它，就像在管理移动设备上的内存一样。每一个 byte 都很宝贵，你不会把无关的东西加载到内存里；同样的，也不要把无关的信息塞进上下文。
+
+好，上下文的道和术讲完了，接下来进入第二组：积累。
 -->
 
 ---
