@@ -196,39 +196,20 @@ clicks: 4
 -->
 
 ---
-layout: center
----
-
-<div class="text-center">
-  <div class="text-4xl font-bold mb-4">序章已经落下</div>
-  <div class="text-lg opacity-70 max-w-lg mx-auto leading-relaxed">
-    AI 能力增长超越摩尔定律，世界在加速变化
-  </div>
-  <div class="mt-8 text-sm opacity-50">
-    不是"要不要用 AI"的问题，而是"如何用好"的问题
-  </div>
-</div>
-
-<!--
-整体判断：序章已经落下。
-
-科技领域的 tick-tock 节奏在 AI 上被打破了——能力增长的速度超过了摩尔定律的预期。
-世界在加速变化，这不再是"要不要用 AI"的讨论，而是"如何用好"的工程问题。
-
-这意味着我们不能等着"AI 更好了再开始"，现在就需要建立工程化的方法。
--->
-
----
 layout: new-section
 ---
 
-# 现实证据
+# <carbon-chart-line-smooth class="inline text-blue-400 mr-2" /> 趋势汇报
 
-先证明变化确实发生，再谈方法论
+<div class="mt-4 text-3xl opacity-70">
+一个大型 iOS 开发团队的变化实例
+</div>
 
 <!--
-过渡页。从时代判断进入现实证据。
-谈方法论前要先证明"变化已发生"，否则一切都是空中楼阁。
+- 这个变化和认知，是有佐证的
+- 举一下我在的公司作为例子
+- 今天是个人身份过来，在已公开范围内进行介绍
+- 我们之后的内容，大家也可以有一个基准参照，实践是在什么规模下发生的
 -->
 
 ---
@@ -237,15 +218,23 @@ layout: default
 
 # 规模背景
 
-<div class="mt-8 grid grid-cols-4 gap-5">
-  <StatCard value="Swift + ObjC" label="Implementation" v-click />
-  <StatCard value="~235 万" label="Lines of Code" v-click />
-  <StatCard value="~650" label="Modules" v-click />
-  <StatCard value="~25,000" label="Files" v-click />
+<div class="mt-6 grid grid-cols-4 gap-6">
+  <StatCard value="Swift + ObjC" label="实现语言" v-click>
+    <template #icon><logos-swift class="inline" /> <span class="opacity-30 mx-1">/</span> <span class="text-purple-700 text-2xl font-extrabold leading-none" style="font-family: 'Fira Code', monospace">.m</span></template>
+  </StatCard>
+  <StatCard value="~250 万" label="代码行数" v-click>
+    <template #icon><carbon-code class="inline" /></template>
+  </StatCard>
+  <StatCard value="~650" label="模块" v-click>
+    <template #icon><carbon-assembly-cluster class="inline" /></template>
+  </StatCard>
+  <StatCard value="~25,000" label="文件" v-click>
+    <template #icon><carbon-document class="inline" /></template>
+  </StatCard>
 </div>
 
-<div class="mt-8 text-sm opacity-60 text-center" v-click>
-  这个规模决定了单 agent 很难稳定覆盖全局，需要系统化的工程方法
+<div class="mt-6 text-lg opacity-60 text-center" v-click>
+  覆盖全局困难，很多小项目和个人项目中不存在的挑战，需要系统化的工程方法
 </div>
 
 <!--
@@ -350,38 +339,46 @@ AI 高使用占比趋势：先出现"高手飞轮"——
 layout: center
 ---
 
+<div class="text-center">
+  <div class="text-4xl font-bold mb-4">序章已经落下</div>
+  <div class="text-lg opacity-70 max-w-lg mx-auto leading-relaxed">
+    AI 能力增长超越摩尔定律，世界在加速变化
+  </div>
+  <div class="mt-8 text-sm opacity-50">
+    不是"要不要用 AI"的问题，而是"如何用好"的问题
+  </div>
+</div>
+
+<!--
+整体判断：序章已经落下。
+
+科技领域的 tick-tock 节奏在 AI 上被打破了——能力增长的速度超过了摩尔定律的预期。
+世界在加速变化，这不再是"要不要用 AI"的讨论，而是"如何用好"的工程问题。
+
+这意味着我们不能等着"AI 更好了再开始"，现在就需要建立工程化的方法。
+-->
+
+---
+layout: center
+---
+
 # 今天的话题
 
 <div class="mt-8 text-2xl text-center leading-relaxed">
 
-**道** <carbon-arrow-right class="inline text-blue-400 mx-2" /> 约束改变 <span class="text-lg opacity-50">（资源 / 可积累 / 协作）</span>
+**上下文** · **积累** · **协作**
 
-<div class="my-6" />
-
-**术** <carbon-arrow-right class="inline text-blue-400 mx-2" /> 怎么落地 <span class="text-lg opacity-50">（切分 / 上下文 / 验证）</span>
+<div class="my-4 text-base opacity-50">每个约束，讲完道，立刻落术</div>
 
 </div>
 
 <!--
-道：先回答约束变了什么——时间点、资源约束、协作约束。
-术：再回答怎么落地——任务切分、上下文工程、质量循环、沉淀机制。
+今天聊三组话题：上下文、积累、协作。
+每一组都是先讲约束（道），紧跟着讲落地方法（术）。
 
 最重要的变化：开发者正在从"写实现"转向"编排系统与验收结果"。
 
 避免工具横评；避免空泛预测。
--->
-
----
-layout: new-section
----
-
-# 道
-
-新世界的底层约束
-
-<!--
-过渡页。证据层成立后，进入"道"——底层约束。
-道负责回答：约束变了什么，判断框架是什么。
 -->
 
 ---
@@ -419,7 +416,8 @@ layout: default
 <div class="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100">
   <div class="text-sm opacity-60 mb-2">方向</div>
   <div class="text-xl font-bold text-blue-700">to-Human → to-Agent</div>
-  <div class="text-xs opacity-50 mt-2">Agent 正在成为软件的新用户</div>
+  <div class="text-xs opacity-50 mt-2">人类要的是结果，不是软件操作过程</div>
+  <div class="text-xs opacity-40 mt-1">平台能力与权限审计成为新的竞争关键</div>
 </div>
 </div>
 
@@ -433,35 +431,23 @@ layout: default
 2. memory + skill = 复利：没有记忆系统，成功经验无法跨任务复用
 3. 协作范式在变：从人指挥多 agent 到多 agent 自协作
 
-一个方向：2A（Develop for Agent）—— Agent 正在成为软件的新用户。
-人类要的是结果，不是软件操作过程。
+一个方向：to-Agent —— 人类要的是结果，不是软件操作过程。
+Agent 正在成为软件的新用户，平台能力与权限审计成为竞争关键。
+
+接下来一组一组看。先从上下文开始。
 -->
 
 ---
-layout: center
+layout: new-section
 ---
 
-<div class="text-center">
-  <carbon-user-favorite class="text-5xl text-blue-500 mb-4 mx-auto" />
-  <div class="text-3xl font-bold mb-4">人类要的是结果</div>
-  <div class="text-3xl font-bold opacity-40 line-through mb-6">不是软件操作过程</div>
-  <div class="text-base opacity-60 max-w-md mx-auto leading-relaxed">
-    软件设计正在从 to-Human 走向 to-Agent，<br/>
-    平台能力与权限审计成为新的竞争关键
-  </div>
-</div>
+# 上下文
+
+Context = 有限内存
 
 <!--
-目标定义页。
-
-核心观点：人类要的是结果，不是软件操作过程。
-这是 2A (Develop for Agent) 的底层逻辑。
-
-Agent 正在成为软件的新用户。
-当 agent 可以代替人来操作软件时，
-软件的设计目标就需要从"让人用着方便"转向"让 agent 能高效执行"。
-
-平台能力、权限审计、可观测性、流程自动化会成为企业竞争关键。
+第一组：上下文。
+先看约束——上下文是最贵的资源；再看怎么做好上下文工程。
 -->
 
 ---
@@ -549,7 +535,118 @@ layout: default
 2. 跨 session 断裂：新的会话无法继承上一次的上下文与决策链路。每次重新解释太浪费。
 3. 关键决策丢失："为什么这样做"的理由没有被持久化，导致团队重复踩坑。
 
-这三个风险共同指向一个需求：需要体系化的 memory 机制。
+风险看清了，接下来看怎么做好上下文工程。
+-->
+
+---
+layout: default
+---
+
+# 上下文工程
+
+<div class="mt-4 text-base mb-6">效果差异来自上下文与执行容器，不来自提示词技巧</div>
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+### 可控注入源 <carbon-document-import class="inline text-blue-500" />
+
+<v-clicks>
+
+- README / 架构图
+- 关键文件清单
+- 约束清单（CLAUDE.md / AGENTS.md）
+- 保持**精确精简**，只提项目领域知识
+
+</v-clicks>
+
+</div>
+<div>
+
+### 注意事项 <carbon-warning class="inline text-orange-500" />
+
+<v-clicks>
+
+- 无关历史会**污染**模型注意力
+- 模型注意力分布：开头 + 最近 > 中段
+- 工程上下文与聊天历史要隔离
+- 过度省成本选低质量模型 → **错误学习**
+
+</v-clicks>
+
+</div>
+</div>
+
+<!--
+上下文工程：从道到术。
+
+核心观点：效果差异主要来自上下文与执行容器，不来自提示词技巧。
+
+可控注入源优先：
+- README、架构图、关键文件、约束清单
+- CLAUDE.md / AGENTS.md 等保持精确精简，只提项目领域知识而不要提通识
+
+注意事项：
+- 无关聊天历史会污染上下文，应与工程上下文隔离
+- 模型注意力常见分布：开头部分和最近部分较强，中间部分是衰减区
+- 过度为省钱选择低质量模型，常会导致"学到错误教训"，长期更贵
+-->
+
+---
+layout: center
+---
+
+<div class="text-center">
+  <div class="text-lg opacity-60 mb-4">模型注意力分布</div>
+  <div class="flex items-end justify-center gap-1 h-32">
+    <div class="w-8 bg-blue-500 rounded-t" style="height: 90%"></div>
+    <div class="w-8 bg-blue-400 rounded-t" style="height: 75%"></div>
+    <div class="w-8 bg-blue-300 rounded-t" style="height: 50%"></div>
+    <div class="w-8 bg-blue-200 rounded-t" style="height: 35%"></div>
+    <div class="w-8 bg-gray-200 rounded-t" style="height: 25%"></div>
+    <div class="w-8 bg-gray-200 rounded-t" style="height: 20%"></div>
+    <div class="w-8 bg-gray-200 rounded-t" style="height: 18%"></div>
+    <div class="w-8 bg-gray-200 rounded-t" style="height: 20%"></div>
+    <div class="w-8 bg-gray-200 rounded-t" style="height: 25%"></div>
+    <div class="w-8 bg-blue-200 rounded-t" style="height: 35%"></div>
+    <div class="w-8 bg-blue-300 rounded-t" style="height: 55%"></div>
+    <div class="w-8 bg-blue-400 rounded-t" style="height: 70%"></div>
+    <div class="w-8 bg-blue-500 rounded-t" style="height: 85%"></div>
+  </div>
+  <div class="flex justify-between text-xs opacity-50 mt-2 px-4 max-w-sm mx-auto">
+    <span>开头（强）</span>
+    <span>中段（弱）</span>
+    <span>最近（强）</span>
+  </div>
+  <div class="mt-6 text-sm opacity-60">
+    把关键信息放在<strong>开头和最近位置</strong>，避免埋在中段
+  </div>
+</div>
+
+<!--
+注意力与污染。
+
+模型注意力常见分布：开头和最近的内容获得更强注意力，中段容易衰减。
+这意味着：
+- 关键约束和规则应该放在上下文的开头
+- 当前任务描述放在最近的位置
+- 避免把重要信息埋在长对话的中间
+
+实际操作：定期清理上下文，把核心信息重新注入。
+上下文的道和术讲完了，接下来进入第二组：积累。
+-->
+
+---
+layout: new-section
+---
+
+# 积累
+
+Memory + Skill = 复利
+
+<!--
+第二组：积累。
+上下文的问题明确后，接下来看如何让经验不断积累、形成复利。
 -->
 
 ---
@@ -656,7 +753,135 @@ AI 使用能力高度个体化，个人强不等于组织强。
 
 关键观察：这类实践推广大多是自下而上的（个体高手经验 -> 团队共识）。
 传统自上而下路径在这个周期里通常偏慢。
-团队实践最重要的是如何让少数人带动多数人。
+怎么让少数人带动多数人？工具策略是第一步。
+-->
+
+---
+layout: default
+---
+
+# Harness 策略
+
+<div class="mt-6 flex items-center gap-8">
+<div class="flex-1">
+
+<v-clicks>
+
+- **不绑定**单一 harness
+- 允许并鼓励多 harness 并存
+- 必要时打造适合自身团队的 harness
+
+</v-clicks>
+
+<div class="mt-6 grid grid-cols-3 gap-3" v-click>
+<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
+  <div class="font-bold mb-1">IDE 集成</div>
+  <span class="opacity-60">日常开发</span>
+</div>
+<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
+  <div class="font-bold mb-1">CLI Agent</div>
+  <span class="opacity-60">批量/自动化</span>
+</div>
+<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
+  <div class="font-bold mb-1">Custom Harness</div>
+  <span class="opacity-60">团队特化</span>
+</div>
+</div>
+
+</div>
+<div class="w-40 flex items-center justify-center">
+  <carbon-settings-adjust class="text-7xl text-indigo-300 opacity-60" />
+</div>
+</div>
+
+<!--
+Harness 策略：从道到术。
+
+不宜与单一 harness 绑定；应习惯并容许多 harness 并存，必要时打造适合自身团队的 harness。
+
+不同场景适合不同 harness：
+- IDE 集成（如 Cursor）：日常开发，快速迭代
+- CLI Agent（如 Claude Code）：批量任务，自动化流程
+- Custom Harness：团队特化，针对特定工作流定制
+
+关键是 harness 要适配团队的工作流程，而不是反过来。
+-->
+
+---
+layout: default
+---
+
+# Skill 沉淀
+
+<div class="mt-6">
+
+<div class="text-base mb-6">每次成功都可以沉淀为可复用路径</div>
+
+<div class="flex items-center justify-center gap-4 mb-8" v-click>
+  <div class="px-4 py-2 rounded-lg bg-blue-100 text-blue-800 text-sm font-semibold">
+    一次成功
+  </div>
+  <carbon-arrow-right class="text-xl text-gray-400" />
+  <div class="px-4 py-2 rounded-lg bg-indigo-100 text-indigo-800 text-sm font-semibold">
+    Skill 化
+  </div>
+  <carbon-arrow-right class="text-xl text-gray-400" />
+  <div class="px-4 py-2 rounded-lg bg-purple-100 text-purple-800 text-sm font-semibold">
+    团队复用
+  </div>
+  <carbon-arrow-right class="text-xl text-gray-400" />
+  <div class="px-4 py-2 rounded-lg bg-green-100 text-green-800 text-sm font-semibold">
+    节省 Token
+  </div>
+</div>
+
+<div class="grid grid-cols-4 gap-3" v-click>
+<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
+  <carbon-template class="text-xl text-blue-500 mb-1" />
+  <div class="font-bold">模板</div>
+</div>
+<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
+  <carbon-notebook class="text-xl text-green-500 mb-1" />
+  <div class="font-bold">Runbook</div>
+</div>
+<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
+  <carbon-document class="text-xl text-purple-500 mb-1" />
+  <div class="font-bold">FAQ</div>
+</div>
+<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
+  <carbon-build-tool class="text-xl text-orange-500 mb-1" />
+  <div class="font-bold">脚手架</div>
+</div>
+</div>
+
+</div>
+
+<!--
+Skill 沉淀收益。
+
+流程 skill 化可节省 token 与重复试错成本。
+每次成功都可以沉淀为 skill：
+
+- 模板：标准化的任务描述模板
+- Runbook：标准化的操作手册
+- FAQ：常见问题的标准解答
+- 脚手架：快速启动新项目/新任务的起点
+
+一次成功 → skill 化 → 团队复用 → 节省 token 和试错成本。
+这是从个人能力到组织能力的桥梁。积累讲完了，最后来看协作。
+-->
+
+---
+layout: new-section
+---
+
+# 协作
+
+从人指挥到 Agent 自协作
+
+<!--
+第三组：协作。
+有了上下文和积累的基础，最后看协作范式如何演进，以及怎么把任务交给 agent。
 -->
 
 ---
@@ -765,107 +990,7 @@ layout: default
 - Event Pipeline：流水线触发，CI 失败后自动修复
 
 风险提示：在极端自动化闭环里，人可能被挤出执行环节，只保留责任承担角色。
-主力 agent 逐步从 local 迁移到云端持续运行环境。
-
-趋势判断：agent 云端化与"随时随地可达"的形态。
--->
-
----
-layout: default
----
-
-# 战略落点
-
-<div class="mt-8 grid grid-cols-2 gap-5">
-
-<KeyPoint title="平台能力" v-click>
-  <template #icon><carbon-cloud-services class="text-2xl" /></template>
-  构建 agent 可调用的服务层
-</KeyPoint>
-
-<KeyPoint title="权限审计" v-click>
-  <template #icon><carbon-locked class="text-2xl" /></template>
-  Agent 代理人类执行时的权限边界与审计
-</KeyPoint>
-
-<KeyPoint title="可观测性" v-click>
-  <template #icon><carbon-dashboard class="text-2xl" /></template>
-  Agent 行为的监控、日志与回溯
-</KeyPoint>
-
-<KeyPoint title="流程自动化" v-click>
-  <template #icon><carbon-flow-modeler class="text-2xl" /></template>
-  从手动触发到事件驱动的全链路
-</KeyPoint>
-
-</div>
-
-<div class="mt-6 text-center text-sm opacity-60" v-click>
-  这些将成为企业级 AI 工程化的竞争关键
-</div>
-
-<!--
-战略落点。
-
-如果约束判断成立，那企业需要在四个方面构建能力：
-1. 平台能力：构建 agent 可调用的服务层，而不是只给人用的 UI
-2. 权限审计：Agent 代理人类执行时的权限边界与审计链路
-3. 可观测性：Agent 行为的监控、日志与回溯能力
-4. 流程自动化：从手动触发到事件驱动的全链路自动化
-
-这些不是"未来的事"，而是现在就需要开始投入的基础设施。
--->
-
----
-layout: new-section
----
-
-# 术
-
-企业可落地的实践框架
-
-<!--
-过渡页。约束明确后，进入"术"——如何把系统搭起来。
-术负责回答：怎么落地、怎么复用。
--->
-
----
-layout: default
----
-
-# 三个支柱
-
-<div class="mt-8 flex items-center justify-center gap-6">
-
-<div class="text-center p-6 rounded-2xl bg-gradient-to-b from-blue-50 to-blue-100 border border-blue-200 w-56" v-click>
-  <carbon-task class="text-4xl text-blue-600 mb-3" />
-  <div class="text-lg font-bold text-blue-800">任务切分</div>
-  <div class="text-xs opacity-60 mt-2">可验收的交付单元</div>
-</div>
-
-<div class="text-center p-6 rounded-2xl bg-gradient-to-b from-indigo-50 to-indigo-100 border border-indigo-200 w-56" v-click>
-  <carbon-data-structured class="text-4xl text-indigo-600 mb-3" />
-  <div class="text-lg font-bold text-indigo-800">上下文工程</div>
-  <div class="text-xs opacity-60 mt-2">喂对信息，不喂多信息</div>
-</div>
-
-<div class="text-center p-6 rounded-2xl bg-gradient-to-b from-purple-50 to-purple-100 border border-purple-200 w-56" v-click>
-  <carbon-renew class="text-4xl text-purple-600 mb-3" />
-  <div class="text-lg font-bold text-purple-800">质量循环</div>
-  <div class="text-xs opacity-60 mt-2">变更 → 证据 → 回归 → 沉淀</div>
-</div>
-
-</div>
-
-<!--
-术的总览：三个支柱。
-
-1. 任务切分：让 agent 接受"可验收交付单元"，不是模糊需求
-2. 上下文工程：喂对信息，不喂多信息
-3. 质量循环：变更 → 证据 → 回归 → 沉淀
-
-这三个支柱构成一个闭环：
-切分好任务 → 给对上下文 → 执行后验证 → 沉淀经验。
+跨越点明确了，怎么把任务交给 agent？关键是任务切分。
 -->
 
 ---
@@ -909,7 +1034,7 @@ layout: default
 </div>
 
 <!--
-任务切分：可验收交付单元。
+任务切分：可验收交付单元。从道到术。
 
 先定义交付物：PR / patch / demo / 回复草稿。
 每种交付物都有明确的"完成"标准。
@@ -981,218 +1106,7 @@ layout: default
 
 验收标准前置的好处：减少返工 + 提高 agent 产出的可信度。
 如果你不告诉 agent 怎么验证，它就不会自验。
--->
-
----
-layout: default
----
-
-# 上下文工程
-
-<div class="mt-4 text-base mb-6">效果差异来自上下文与执行容器，不来自提示词技巧</div>
-
-<div class="grid grid-cols-2 gap-6">
-<div>
-
-### 可控注入源 <carbon-document-import class="inline text-blue-500" />
-
-<v-clicks>
-
-- README / 架构图
-- 关键文件清单
-- 约束清单（CLAUDE.md / AGENTS.md）
-- 保持**精确精简**，只提项目领域知识
-
-</v-clicks>
-
-</div>
-<div>
-
-### 注意事项 <carbon-warning class="inline text-orange-500" />
-
-<v-clicks>
-
-- 无关历史会**污染**模型注意力
-- 模型注意力分布：开头 + 最近 > 中段
-- 工程上下文与聊天历史要隔离
-- 过度省成本选低质量模型 → **错误学习**
-
-</v-clicks>
-
-</div>
-</div>
-
-<!--
-上下文工程。
-
-核心观点：效果差异主要来自上下文与执行容器，不来自提示词技巧。
-
-可控注入源优先：
-- README、架构图、关键文件、约束清单
-- CLAUDE.md / AGENTS.md 等保持精确精简，只提项目领域知识而不要提通识
-
-注意事项：
-- 无关聊天历史会污染上下文，应与工程上下文隔离
-- 模型注意力常见分布：开头部分和最近部分较强，中间部分是衰减区
-- 过度为省钱选择低质量模型，常会导致"学到错误教训"，长期更贵
--->
-
----
-layout: center
----
-
-<div class="text-center">
-  <div class="text-lg opacity-60 mb-4">模型注意力分布</div>
-  <div class="flex items-end justify-center gap-1 h-32">
-    <div class="w-8 bg-blue-500 rounded-t" style="height: 90%"></div>
-    <div class="w-8 bg-blue-400 rounded-t" style="height: 75%"></div>
-    <div class="w-8 bg-blue-300 rounded-t" style="height: 50%"></div>
-    <div class="w-8 bg-blue-200 rounded-t" style="height: 35%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 25%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 20%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 18%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 20%"></div>
-    <div class="w-8 bg-gray-200 rounded-t" style="height: 25%"></div>
-    <div class="w-8 bg-blue-200 rounded-t" style="height: 35%"></div>
-    <div class="w-8 bg-blue-300 rounded-t" style="height: 55%"></div>
-    <div class="w-8 bg-blue-400 rounded-t" style="height: 70%"></div>
-    <div class="w-8 bg-blue-500 rounded-t" style="height: 85%"></div>
-  </div>
-  <div class="flex justify-between text-xs opacity-50 mt-2 px-4 max-w-sm mx-auto">
-    <span>开头（强）</span>
-    <span>中段（弱）</span>
-    <span>最近（强）</span>
-  </div>
-  <div class="mt-6 text-sm opacity-60">
-    把关键信息放在<strong>开头和最近位置</strong>，避免埋在中段
-  </div>
-</div>
-
-<!--
-注意力与污染。
-
-模型注意力常见分布：开头和最近的内容获得更强注意力，中段容易衰减。
-这意味着：
-- 关键约束和规则应该放在上下文的开头
-- 当前任务描述放在最近的位置
-- 避免把重要信息埋在长对话的中间
-
-实际操作：定期清理上下文，把核心信息重新注入。
--->
-
----
-layout: default
----
-
-# Harness 策略
-
-<div class="mt-6 flex items-center gap-8">
-<div class="flex-1">
-
-<v-clicks>
-
-- **不绑定**单一 harness
-- 允许并鼓励多 harness 并存
-- 必要时打造适合自身团队的 harness
-
-</v-clicks>
-
-<div class="mt-6 grid grid-cols-3 gap-3" v-click>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <div class="font-bold mb-1">IDE 集成</div>
-  <span class="opacity-60">日常开发</span>
-</div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <div class="font-bold mb-1">CLI Agent</div>
-  <span class="opacity-60">批量/自动化</span>
-</div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <div class="font-bold mb-1">Custom Harness</div>
-  <span class="opacity-60">团队特化</span>
-</div>
-</div>
-
-</div>
-<div class="w-40 flex items-center justify-center">
-  <carbon-settings-adjust class="text-7xl text-indigo-300 opacity-60" />
-</div>
-</div>
-
-<!--
-Harness 策略。
-
-不宜与单一 harness 绑定；应习惯并容许多 harness 并存，必要时打造适合自身团队的 harness。
-
-不同场景适合不同 harness：
-- IDE 集成（如 Cursor）：日常开发，快速迭代
-- CLI Agent（如 Claude Code）：批量任务，自动化流程
-- Custom Harness：团队特化，针对特定工作流定制
-
-关键是 harness 要适配团队的工作流程，而不是反过来。
--->
-
----
-layout: default
----
-
-# Skill 沉淀
-
-<div class="mt-6">
-
-<div class="text-base mb-6">每次成功都可以沉淀为可复用路径</div>
-
-<div class="flex items-center justify-center gap-4 mb-8" v-click>
-  <div class="px-4 py-2 rounded-lg bg-blue-100 text-blue-800 text-sm font-semibold">
-    一次成功
-  </div>
-  <carbon-arrow-right class="text-xl text-gray-400" />
-  <div class="px-4 py-2 rounded-lg bg-indigo-100 text-indigo-800 text-sm font-semibold">
-    Skill 化
-  </div>
-  <carbon-arrow-right class="text-xl text-gray-400" />
-  <div class="px-4 py-2 rounded-lg bg-purple-100 text-purple-800 text-sm font-semibold">
-    团队复用
-  </div>
-  <carbon-arrow-right class="text-xl text-gray-400" />
-  <div class="px-4 py-2 rounded-lg bg-green-100 text-green-800 text-sm font-semibold">
-    节省 Token
-  </div>
-</div>
-
-<div class="grid grid-cols-4 gap-3" v-click>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-template class="text-xl text-blue-500 mb-1" />
-  <div class="font-bold">模板</div>
-</div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-notebook class="text-xl text-green-500 mb-1" />
-  <div class="font-bold">Runbook</div>
-</div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-document class="text-xl text-purple-500 mb-1" />
-  <div class="font-bold">FAQ</div>
-</div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-build-tool class="text-xl text-orange-500 mb-1" />
-  <div class="font-bold">脚手架</div>
-</div>
-</div>
-
-</div>
-
-<!--
-Skill 沉淀收益。
-
-流程 skill 化可节省 token 与重复试错成本。
-每次成功都可以沉淀为 skill：
-
-- 模板：标准化的任务描述模板
-- Runbook：标准化的操作手册
-- FAQ：常见问题的标准解答
-- 脚手架：快速启动新项目/新任务的起点
-
-一次成功 → skill 化 → 团队复用 → 节省 token 和试错成本。
-这是从个人能力到组织能力的桥梁。
+三组道术讲完，来看整体的工程价值变化。
 -->
 
 ---
@@ -1220,75 +1134,70 @@ layout: two-cols-header
   <template #icon><carbon-arrow-up class="text-green-500" /></template>
   <v-clicks>
 
-  - **提早优化**在部分场景反而更重要<br/><span class="text-xs opacity-60">Agent 执行时不会"先跑通再优化"</span>
-  - Feature / UI 测试的维护成本**显著下降**<br/><span class="text-xs opacity-60">自动化回归边界大幅扩大</span>
-  - **TDD** 缩短试错回路<br/><span class="text-xs opacity-60">提高可验证性</span>
+  - **TDD** 缩短试错回路<br/><span class="text-xs opacity-60">为 agent 提供即时反馈信号</span>
+  - **可观测性** + Benchmark<br/><span class="text-xs opacity-60">让产出可度量，从"感觉"变成"数据"</span>
+  - **可验证循环** 变更→证据→回归→沉淀<br/><span class="text-xs opacity-60">自动化回归边界大幅扩大</span>
 
   </v-clicks>
 </CompareColumn>
 
 <!--
-工程价值重排（旧观点变化 vs 既有实践增强）。
+工程价值重排 + 既有实践新价值。
 
-正在弱化：
-- DRY 边际价值下降：局部重复换取可理解性有时更优
-- 手写代码的稀缺性下降：代码本身不再是核心壁垒
-- 传统 code review 形态需要重构：从逐行审阅到意图+结果验证
-
-正在增强：
-- 过去被视为不经济的"提早优化"，在部分场景反而更重要
-- Feature/UI 测试的维护成本下降，自动化回归边界扩大
-- TDD 缩短试错回路，提高可验证性
+弱化：DRY 边际下降、手写代码稀缺性下降、传统 review 需重构。
+增强：TDD 即时反馈、可观测性让产出可度量、可验证循环扩大回归边界。
 
 AI 变强后，不是"少做工程"，而是"重排工程优先级"。
+这些既有实践——TDD、Benchmark、可观测性——在 AI 时代价值被放大了，
+因为 agent 需要明确的验证信号才能自我修正。
 -->
 
 ---
 layout: default
 ---
 
-# 既有实践的新价值
+# 战略落点
 
-<div class="mt-6 grid grid-cols-2 gap-5">
+<div class="mt-8 grid grid-cols-2 gap-5">
+
+<KeyPoint title="平台能力" v-click>
+  <template #icon><carbon-cloud-services class="text-2xl" /></template>
+  构建 agent 可调用的服务层
+</KeyPoint>
+
+<KeyPoint title="权限审计" v-click>
+  <template #icon><carbon-locked class="text-2xl" /></template>
+  Agent 代理人类执行时的权限边界与审计
+</KeyPoint>
 
 <KeyPoint title="可观测性" v-click>
   <template #icon><carbon-dashboard class="text-2xl" /></template>
-  测试覆盖、数量与质量指标，让产出可度量
+  Agent 行为的监控、日志与回溯
 </KeyPoint>
 
-<KeyPoint title="TDD" v-click>
-  <template #icon><carbon-checkmark-outline class="text-2xl" /></template>
-  缩短试错回路，为 agent 提供即时反馈
-</KeyPoint>
-
-<KeyPoint title="Benchmark" v-click>
-  <template #icon><carbon-meter class="text-2xl" /></template>
-  把性能与成本讨论从"感觉"变成"数据"
-</KeyPoint>
-
-<KeyPoint title="可验证循环" v-click>
-  <template #icon><carbon-renew class="text-2xl" /></template>
-  变更 → 证据 → 回归 → 沉淀
+<KeyPoint title="流程自动化" v-click>
+  <template #icon><carbon-flow-modeler class="text-2xl" /></template>
+  从手动触发到事件驱动的全链路
 </KeyPoint>
 
 </div>
 
 <div class="mt-6 text-center text-sm opacity-60" v-click>
-  AI 变强后，不是"少做工程"，而是"重排工程优先级"
+  这些将成为企业级 AI 工程化的竞争关键
 </div>
 
 <!--
-既有实践的新价值。
+战略落点。
 
-可观测性（测试覆盖、数量与质量指标）：让产出可度量。
-TDD：缩短试错回路，为 agent 提供即时反馈信号。
-Benchmark：把性能与成本讨论从"感觉"变成"数据"。
-可验证循环：变更 → 证据 → 回归 → 沉淀。
+如果约束判断成立，那企业需要在四个方面构建能力：
+1. 平台能力：构建 agent 可调用的服务层，而不是只给人用的 UI
+2. 权限审计：Agent 代理人类执行时的权限边界与审计链路
+3. 可观测性：Agent 行为的监控、日志与回溯能力
+4. 流程自动化：从手动触发到事件驱动的全链路自动化
 
-这些不是新概念，但在 AI 时代它们的价值被放大了。
-因为 agent 需要明确的验证信号才能自我修正。
+这些不是"未来的事"，而是现在就需要开始投入的基础设施。
+战略落点明确后，来看实际案例。
 -->
-
 ---
 layout: new-section
 ---
@@ -1298,7 +1207,7 @@ layout: new-section
 不是"AI 很神"，而是"流程如何标准化和沉淀"
 
 <!--
-过渡页。讲完术，不靠口号，直接看两个案例。
+过渡页。三组道术讲完，不靠口号，直接看两个案例。
 案例不该只讲"AI 很神"，而应讲"流程如何被标准化和沉淀"。
 -->
 
