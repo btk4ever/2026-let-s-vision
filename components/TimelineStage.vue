@@ -42,8 +42,8 @@ defineProps({
 }
 
 .stage-dot {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: #cbd5e1;
   border: 3px solid #e2e8f0;
@@ -59,17 +59,17 @@ defineProps({
 }
 
 .stage-content {
-  margin-top: 16px;
+  margin-top: 20px;
   text-align: center;
 }
 
 .stage-label {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #94a3b8;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .timeline-stage.active .stage-label {
@@ -77,16 +77,16 @@ defineProps({
 }
 
 .stage-title {
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   line-height: 1.3;
 }
 
 .stage-desc {
-  font-size: 12px;
+  font-size: 18px;
   color: #64748b;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 </style>

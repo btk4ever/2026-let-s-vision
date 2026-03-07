@@ -19,99 +19,100 @@ drawings:
   enabled: false
 presenter: true
 download: true
-layout: default
+layout: intro
+class: text-center
 ---
 
 # AI Agent 的道与术
 
-Agentic Engineering 时代的工程师实践
-
-<div class="abs-br mr-14 mb-10 flex flex-col items-end gap-2">
-  <div class="text-sm opacity-60">2026.03 / Shanghai</div>
-  <div class="text-xs opacity-40">Wei Wang · @onevcat</div>
+<div class="text-2xl opacity-80">
+  <span class="strike-anim transition-opacity duration-700" :class="$clicks >= 1 ? 'struck opacity-40' : ''">Agentic Engineering 时代的工程师实践</span>
 </div>
 
+<div v-click class="mt-4 text-lg opacity-70">
+  —— 团队和个人的 Agent 使用心得分享
+</div>
+
+<div class="abs-bl ml-14 mb-10 flex items-center gap-4">
+  <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+    <img src="/avatar.jpg" class="w-full h-full object-cover" />
+  </div>
+  <div class="flex flex-col gap-0.5 text-left">
+    <div class="text-base opacity-80 font-semibold">王巍 · @onevcat</div>
+    <div class="text-sm opacity-60">https://onev.cat</div>
+  </div>
+</div>
+
+<div class="abs-br mr-14 mb-10 text-sm opacity-50">
+  2026.03 / Shanghai
+</div>
+
+<style>
+.strike-anim {
+  position: relative;
+  display: inline-block;
+}
+.strike-anim::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 3px;
+  background: currentColor;
+  transition: width 0.8s ease;
+}
+.strike-anim.struck::after {
+  width: 100%;
+}
+</style>
+
 <!--
-开场标题页。不需要多说，直接亮出主题。
-强调 Agentic Engineering 而不是 Vibe Coding —— 我们关注的是工程范式，不是工具横评。
+- 感谢组委会邀请，感谢大周末来的各位
+- 题目来由：组委会怂恿"做大一点，好卖票"
+- Agentic Engineering → 组织管理 agent、高效协作，话题太大且高速变化
+- [click] 划掉大副标题 → 所以没那么玄乎
+- 真实定位：团队和个人这段时间用 AI agent 写代码的心得 & 最佳实践
 -->
 
 ---
 layout: default
+clicks: 2
 ---
 
-# 从"正襟危坐"到"边炒菜边编程"
+# 龙虾 🦞，智能体 🤖，Geek 的未来
 
-<div class="mt-8 flex items-center gap-6">
-<div class="flex-1">
-
-<v-clicks>
-
-- 我的日常工作方式，已经发生了根本变化
-- 背后不是姿势变化，而是 **agent 可达性**的跃迁
-- 产出与效率出现了显著提升
-- 但也带来了新的要求：**任务编排**与**验收能力**
-
-</v-clicks>
-
-</div>
-<div class="w-60 flex items-center justify-center">
-  <carbon-bot class="text-8xl text-blue-400 opacity-80" />
-</div>
+<div class="mt-2 flex justify-center items-center relative h-100">
+  <img v-click="[1,2]" src="/geek-future.jpg" class="max-h-full rounded-lg shadow-lg absolute transition-opacity duration-500" />
+  <img v-click="2" src="/cooking.jpg" class="max-h-full rounded-lg shadow-lg absolute transition-opacity duration-500" />
 </div>
 
 <!--
-讲者切入，轻松趣味。
 
-真实故事：我自己的工作方式已经从"正襟危坐写代码"变成了"边炒菜边编程"。
-这背后不是在说我偷懒了，而是 agent 的可达性变了。
-随时可以启动一个 agent 来帮你干活，你只需要在关键节点做验收。
-
-但同时，对编排和验收能力的要求变高了——你得能把问题定义清楚，得能验证结果是否正确。
--->
-
----
-layout: center
----
-
-# 今天的输出
-
-<div class="mt-6 text-xl text-center leading-relaxed">
-
-**道** <carbon-arrow-right class="inline text-blue-400 mx-2" /> 约束变了什么 <span class="text-sm opacity-50">（时间点 / 资源 / 协作）</span>
-
-<div class="my-4" />
-
-**术** <carbon-arrow-right class="inline text-blue-400 mx-2" /> 怎么落地 <span class="text-sm opacity-50">（切分 / 上下文 / 质量 / 沉淀）</span>
-
-</div>
-
-<div class="mt-10 text-sm opacity-60 text-center">
-  一套可执行的工程实践框架，不是工具横评
-</div>
-
-<!--
-30 秒总主张。这场不是技术科普，不是产品 demo。
-
-道：先回答约束变了什么——时间点、资源约束、协作约束。
-术：再回答怎么落地——任务切分、上下文工程、质量循环、沉淀机制。
-
-最重要的变化：开发者正在从"写实现"转向"编排系统与验收结果"。
-
-避免工具横评；避免空泛预测。
+- OpenClaw，龙虾火出圈。它的意义和启发是什么
+- Peter 在社媒上的发布，理想中的 Geek 的样子
+- 但理想和现实的差距，我实际的使用方式
+- 不论具体的使用方式是什么，AI的渗透和对工程师的改变
+- Geek 的未来，在 AI agent 从办公桌渗透到厨房时，如何共存
 -->
 
 ---
 layout: new-section
 ---
 
-# 时代判断
+# 身在此山中
 
-回顾过去不是怀旧，而是为今天的工程决策定坐标
+<div class="flex justify-center">
+<div class="text-left space-y-3">
+<p class="!opacity-80 !text-3xl flex items-center"><carbon-map class="text-blue-400 mr-2 text-3xl flex-shrink-0" />我们是怎么走到今天这一步的？</p>
+<p class="!opacity-80 !text-3xl flex items-center"><carbon-compass class="text-blue-400 mr-2 text-3xl flex-shrink-0" />为今后的工程决策定坐标</p>
+</div>
+</div>
 
 <!--
-过渡页。从开场进入第一个正式章节：时代判断。
-回顾阶段不是怀旧，而是为了定位当前坐标并推断下一阶段。
+- 想要讨论未来，我们必须搞清楚我们是怎么一路走到现在的
+- “不识庐山真面目，只缘身在此山中。”
+- 定位当前坐标，猜测和判断我们所处的位置，并推断下一阶段。
 -->
 
 ---
@@ -120,7 +121,7 @@ layout: default
 
 # 从前、当下、将来
 
-<div class="mt-4 flex gap-3">
+<div class="mt-6 flex gap-4">
   <TimelineStage label="Phase I" title="Tab 补全" v-click>
     AI 进入编码动作
   </TimelineStage>
@@ -131,69 +132,67 @@ layout: default
     仓内上下文协作
   </TimelineStage>
   <TimelineStage label="Phase IV" title="Code Agent" active v-click>
-    长时任务 / 少指令 / 自主
+    长任务 / 少指令 / 自主
   </TimelineStage>
 </div>
 
-<div class="mt-8 text-sm opacity-60 text-center" v-click>
-  我们正处于 Phase III → IV 的转折点
+<div class="mt-10 relative h-16">
+  <div v-click="[1,2]" class="absolute inset-0 flex items-center justify-center gap-5 transition-opacity duration-300">
+    <span class="text-base opacity-50">2018 – 2022</span>
+    <span class="px-4 py-1.5 bg-gray-100 rounded-md text-base">TabNine</span>
+    <span class="px-4 py-1.5 bg-gray-100 rounded-md text-base">Kite</span>
+  </div>
+  <div v-click="[2,3]" class="absolute inset-0 flex items-center justify-center gap-5 transition-opacity duration-300">
+    <span class="text-base opacity-50">2022 – 2024</span>
+    <span class="px-4 py-1.5 bg-gray-100 rounded-md text-base">ChatGPT</span>
+    <span class="px-4 py-1.5 bg-gray-100 rounded-md text-base">Claude</span>
+  </div>
+  <div v-click="[3,4]" class="absolute inset-0 flex items-center justify-center gap-5 transition-opacity duration-300">
+    <span class="text-base opacity-50">2024 – 2025</span>
+    <span class="px-4 py-1.5 bg-gray-100 rounded-md text-base">Cursor</span>
+    <span class="px-4 py-1.5 bg-gray-100 rounded-md text-base">Windsurf</span>
+  </div>
+  <div v-click="4" class="absolute inset-0 flex items-center justify-center gap-5 transition-opacity duration-300">
+    <span class="text-base opacity-50">2025 –</span>
+    <span class="px-4 py-1.5 bg-blue-50 rounded-md text-base text-blue-600 font-medium">Claude Code</span>
+    <span class="px-4 py-1.5 bg-blue-50 rounded-md text-base text-blue-600 font-medium">Codex</span>
+  </div>
 </div>
 
 <!--
-四阶段统一演进图，同时涵盖机制和工具维度：
+[节奏] 每个 Phase 停 5-8 秒，让观众消化
 
-Phase I - Tab 自动补全：AI 第一次进入编码动作本身。Copilot 为代表。
-Phase II - Chatbot（提示-响应）：开发者以同步回路指挥智能体。ChatGPT/Claude chat。
-Phase III - AI Editor：智能体进入仓内上下文，开始参与局部执行闭环。Cursor/Windsurf。
-Phase IV（进行中）- Code Agent：长时任务、少指令、人机协作跨度显著扩大。Claude Code/Codex。
+- Phase I：最早的 AI 编码体验，补全当前行。「AI 第一次摸到了你的代码」
+- Phase II：ChatGPT chatbox 时代，问题甩给聊天窗口。强大但割裂——复制粘贴来回搬运，缺乏整体认知（Stack overflow 的替代）
+- Phase III：Cursor/Windsurf 把 AI 拉进编辑器，能读整个仓库，生成大段代码，进行预测
+- Phase IV：Claude Code/Codex 更强大的工具调用（agent loop），自主运行、调试、提交。
 
-三阶段机制视角同样成立：补全→同步回路→异步自主。
-与智能体协作不是一次性学习，而是持续校准边界的过程。
+- 人逐渐从编码的主题，退到辅助位和验收位
+
+[关键句] 回顾不是怀旧，是为了给今天的工程决策定坐标。
+[过渡] 如果这个演进成立，下一个问题就是：当前阶段，人的瓶颈在哪？
 -->
 
 ---
 layout: default
+clicks: 4
 ---
 
-# 当下：人开始成为瓶颈
+# PHASE IV - 人开始成为瓶颈
 
-<div class="mt-6 grid grid-cols-2 gap-8">
-<div>
-
-### 模型端 <carbon-machine-learning class="inline text-blue-500" />
-
-<v-clicks>
-
-- 2025 末到 2026 初：能力**台阶式**提升
-- 局部场景中，模型执行速度已超过人类串行决策
-- 代码生成的准确率持续攀升
-
-</v-clicks>
-
-</div>
-<div>
-
-### 工程师端 <carbon-user class="inline text-blue-500" />
-
-<v-clicks>
-
-- 价值重心正在迁移
-- 写实现的成本在下降
-- **定义问题 / 设边界 / 做取舍 / 做验收**<br/>成为更稀缺的能力
-
-</v-clicks>
-
-</div>
+<div class="flex-1 mt-1">
+  <CapabilityChart :step="$clicks" />
 </div>
 
 <!--
-当下判断（2025/12 ~ 2026 初）：
+[节奏] 三步递进，每步停 5 秒
 
-模型能力台阶式提升后，局部场景里人的串行决策速度开始成为瓶颈。
-这不是说人不重要了，恰恰相反——人在更高层次上变得更重要。
+- Click 1（人类线）：工程师能力一直在涨——持续学习、掌握新工具、积累经验。但这是线性的。
+- Click 2（模型线）：模型能力也在涨，而且是指数型的。几个代表性的事件：2025 前半 Claude
+ Code 出现，2025 年底 Opus 4.5 和 Codex 5.2 发布后，出现明显的感知。大家会觉得突然
+- Click 3（差距高亮）：这个橙色区域就是"瓶颈"——不是人不行了，而是模型太快了，人类决策的速度跟不上模型的速度。
 
-工程师价值重心迁移到：定义问题、设边界、做取舍、做验收。
-写代码本身的成本在快速下降，但判断什么该写、怎么验证，变得更稀缺。
+[关键句] 开发者的工作往更高层次上移动了：定义问题、设边界、做验收。
 -->
 
 ---
@@ -345,6 +344,31 @@ AI 高使用占比趋势：先出现"高手飞轮"——
 如果不能扩散，就会形成 AI 格差。
 
 所有数据：只讲趋势不讲绝对值；不展示可回推信息。
+-->
+
+---
+layout: center
+---
+
+# 今天的话题
+
+<div class="mt-8 text-2xl text-center leading-relaxed">
+
+**道** <carbon-arrow-right class="inline text-blue-400 mx-2" /> 约束改变 <span class="text-lg opacity-50">（资源 / 可积累 / 协作）</span>
+
+<div class="my-6" />
+
+**术** <carbon-arrow-right class="inline text-blue-400 mx-2" /> 怎么落地 <span class="text-lg opacity-50">（切分 / 上下文 / 验证）</span>
+
+</div>
+
+<!--
+道：先回答约束变了什么——时间点、资源约束、协作约束。
+术：再回答怎么落地——任务切分、上下文工程、质量循环、沉淀机制。
+
+最重要的变化：开发者正在从"写实现"转向"编排系统与验收结果"。
+
+避免工具横评；避免空泛预测。
 -->
 
 ---
@@ -942,6 +966,12 @@ layout: default
 
 <!--
 验收前置：先定义"怎么算做完"，再开始做。
+
+着重提一下测试 BDD:
+- 最接近自然语言的测试
+- 天生适合作为 spec 规范
+- LLM 通过自然语言生成测试
+- 然后代码实现时由测试确保
 
 验收标准要前置定义：
 - 测试：单元/集成/UI 测试覆盖
