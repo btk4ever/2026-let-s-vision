@@ -823,50 +823,56 @@ layout: default
 
 # 组织挑战：高手飞轮 vs 团队断层
 
-<div class="mt-6 flex items-center gap-8">
-<div class="flex-1">
+<div class="mt-2 text-base opacity-60">实践推广大多是自下而上的——让高手带动团队</div>
 
-<v-clicks>
+<div class="mt-10 flex items-center justify-center gap-4">
 
-- 少数人的 AI 使用能力极强，效率提升显著
-- 但 **AI 使用能力高度个体化**
-- 个人强 ≠ 组织强
+<div v-click class="flex-1 text-center">
+  <div class="mx-auto w-20 h-20 rounded-2xl bg-teal-50 border border-teal-200 shadow-sm flex items-center justify-center mb-3">
+    <carbon-user class="text-3xl text-teal-600" />
+  </div>
+  <div class="text-lg font-bold">少数高手</div>
+  <div class="text-sm opacity-60 mt-1">个体实践涌现<br/>效率提升显著</div>
+</div>
 
-</v-clicks>
+<carbon-arrow-right v-click class="text-4xl text-gray-400 flex-shrink-0" />
 
-<div class="mt-6" v-click>
+<div v-click class="flex-1 text-center">
+  <div class="mx-auto w-20 h-20 rounded-2xl bg-green-50 border border-green-200 shadow-sm flex items-center justify-center mb-3">
+    <carbon-events class="text-3xl text-green-600" />
+  </div>
+  <div class="text-lg font-bold">团队共识</div>
+  <div class="text-sm opacity-60 mt-1">Memory/Skill 可沉淀<br/>经验可分享、可复用</div>
+</div>
 
-### 关键观察
+<carbon-arrow-right v-click class="text-4xl text-gray-400 flex-shrink-0" />
 
-- 实践推广大多是**自下而上**的
-- 个体高手经验 → 团队共识
-- 传统自上而下路径在这个周期里偏慢
-- 对齐关键：让高手的 Memory/Skill **可沉淀、可分享**
-
+<div v-click class="flex-1 text-center">
+  <div class="mx-auto w-20 h-20 rounded-2xl bg-purple-50 border border-purple-200 shadow-sm flex items-center justify-center mb-3">
+    <carbon-enterprise class="text-3xl text-purple-600" />
+  </div>
+  <div class="text-lg font-bold">组织能力</div>
+  <div class="text-sm opacity-60 mt-1">对齐拉平 AI 格差<br/>制度与工具跟进</div>
 </div>
 
 </div>
-<div class="w-48 flex flex-col items-center gap-3">
-  <div class="px-4 py-2 rounded-lg bg-teal-100 text-teal-800 text-sm font-bold">
-    <carbon-events class="inline mr-1" /> 少数高手
-  </div>
-  <carbon-arrow-down class="text-xl text-gray-400" />
-  <div class="px-4 py-2 rounded-lg bg-green-100 text-green-800 text-sm font-bold">
-    <carbon-group class="inline mr-1" /> 团队共识
-  </div>
-  <carbon-arrow-down class="text-xl text-gray-400" />
-  <div class="px-4 py-2 rounded-lg bg-purple-100 text-purple-800 text-sm font-bold">
-    <carbon-enterprise class="inline mr-1" /> 组织能力
-  </div>
-</div>
+
+<div v-click class="mt-10 mx-auto pl-5 border-l-3 border-teal-300 text-xl opacity-50" style="max-width: 80%;">
+  传统自上而下路径在这个周期里偏慢——等制度跟上，高手已经迭代三轮了
 </div>
 
 <!--
-AI的两极分化大部分是闻道有先后造成的。
-但这里存在的"少数人飞起、多数人观望"的组织问题是实际存在和需要解决的。
+AI 的两极分化大部分是闻道有先后造成的。
+但"少数人飞起、多数人观望"的组织问题是实际存在、需要解决的。
 
-组织里会有一些约定的实践，比如通用的 skill 和 workflow 等。很多这些实践的推广大多是自下而上的。
-传统自上而下路径在这个周期里通常偏慢——等制度跟上，可能高手已经迭代三轮了。反过来，让这些高手能带动团队一起进步，可能是更正确的方向。
+[click] 起点是少数高手——他们率先摸索出高效的 AI 使用方式，效率提升非常显著。
+[click] 关键一步是形成团队共识——高手的 Memory 和 Skill 需要可沉淀、可分享、可复用。
+不能停留在个人脑子里，要变成团队资产。
+[click] 最终目标是组织能力——通过对齐和拉平 AI 格差，让整个团队的效率一起上来。
+制度和工具要跟进，但不能等制度先行，要让高手先跑起来带动其他人。
+
+[click] 补充一句：传统自上而下路径在这个周期里偏慢。
+等制度设计好，高手可能已经迭代三轮了。正确的路径是自下而上：高手先跑，沉淀经验，团队复用，最后制度兜底。
 -->
 
 ---
