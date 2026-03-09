@@ -879,51 +879,56 @@ AI 的两极分化大部分是闻道有先后造成的。
 layout: default
 ---
 
-# Harness 策略
+# 释放高手，沉淀实践
 
-<div class="mt-6 flex items-center gap-8">
-<div class="flex-1">
+<div class="mt-2 text-base opacity-60">尊重高手的判断——让他们自由编排工具与工作流</div>
 
-<v-clicks>
+<div class="mt-8 space-y-8">
 
-- **不绑定**单一 harness
-- 允许并鼓励多 harness 并存
-- 必要时打造适合自身团队的 harness
-
-</v-clicks>
-
-<div class="mt-6 grid grid-cols-3 gap-3" v-click>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <div class="font-bold mb-1">IDE 集成</div>
-  <span class="opacity-60">日常开发</span>
-</div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <div class="font-bold mb-1">CLI Agent</div>
-  <span class="opacity-60">批量/自动化</span>
-</div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <div class="font-bold mb-1">Custom Harness</div>
-  <span class="opacity-60">团队特化</span>
-</div>
+<div v-click class="pl-5 border-l-3 border-teal-300">
+  <div class="flex items-center gap-2 mb-1">
+    <carbon-explore class="text-lg text-teal-600" />
+    <span class="font-bold text-lg">没有公认的最佳实践——让高手先跑</span>
+  </div>
+  <div class="text-base opacity-60 leading-relaxed">业界仍在摸索，过早统一标准反而限制探索空间。在安全合规的底线之上，放手让有好奇心的核心开发者自由编排。</div>
 </div>
 
+<div v-click class="pl-5 border-l-3 border-teal-300">
+  <div class="flex items-center gap-2 mb-1">
+    <carbon-compare class="text-lg text-teal-600" />
+    <span class="font-bold text-lg">鼓励多 Harness 并存与比较</span>
+  </div>
+  <div class="text-base opacity-60 leading-relaxed">Claude Code、Codex、Pi、OpenCode……让高手充分体验每个工具的长短，抽选甚至构建最适合团队的 Harness。</div>
 </div>
-<div class="w-40 flex items-center justify-center">
-  <carbon-settings-adjust class="text-7xl text-indigo-300 opacity-60" />
+
+<div v-click class="pl-5 border-l-3 border-teal-500 bg-teal-50/50 py-4 pr-4 rounded-r-lg">
+  <div class="flex items-center gap-2 mb-1">
+    <carbon-build-tool class="text-lg text-teal-600" />
+    <span class="font-bold text-lg">自定义 Harness 已不再遥不可及</span>
+  </div>
+  <div class="text-base opacity-60 leading-relaxed">以前需要大量开发且难以维护；现在在 AI Agent 的帮助下，团队级定制开发已完全可行。<br/><b>Domain 知识 × Agent 实践 = 团队的最大贡献。</b></div>
 </div>
+
 </div>
 
 <!--
-Harness 策略：从道到术。
+承接上一页：团队里确实存在高手，怎么用好他们？
 
-不宜与单一 harness 绑定；应习惯并容许多 harness 并存，必要时打造适合自身团队的 harness。
+核心观点：要让团队的 AI 使用方式发生突破，就必须尊重高手的判断，
+让他们自由地编排自己需要的工具和工具链。
 
-不同场景适合不同 harness：
-- IDE 集成（如 Cursor）：日常开发，快速迭代
-- CLI Agent（如 Claude Code）：批量任务，自动化流程
-- Custom Harness：团队特化，针对特定工作流定制
+[click] 第一，业界目前没有公认的最佳实践，大家都还在摸索和探索。
+这个时候去强调团队统一标准，或者试图确定哪一个方案是绝对的最佳实践，是不现实的。
+在安全合规的底线之上，应该让有好奇心的核心开发者尽情探索。
 
-关键是 harness 要适配团队的工作流程，而不是反过来。
+[click] 第二，鼓励多 Harness 并存。Claude Code 是一套 Harness，Codex 是一套，
+OpenCode、Pear 也是。允许团队在不同 Harness 之间尝试，
+充分理解每个工具的长短，然后想办法抽选出最适合团队的方案，
+甚至在需要的时候构建自己的 Harness。
+
+[click] 第三，自定义 Harness 以前几乎不可能——需要大量开发且难以维护。
+但现在在 Vibe Coding 和 AI Agent 的帮助下，这种级别的团队定制开发已经变得完全可行。
+最了解项目的人，结合 Agent 实践，摸索出来的方法就是对团队最大的贡献。
 -->
 
 ---
