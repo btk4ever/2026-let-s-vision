@@ -854,38 +854,36 @@ Agent 不会自动变强，能力上限取决于驾驭它的人。
 layout: default
 ---
 
-# 组织挑战：高手飞轮 vs 团队断层
+# 组织挑战：处理团队断层
 
 <div class="mt-2 text-base opacity-60">实践推广大多是自下而上的——让高手带动团队</div>
 
-<div class="mt-10 flex items-center justify-center gap-4">
+<div class="mt-8 flex items-stretch justify-center gap-5">
 
-<div v-click class="flex-1 text-center">
-  <div class="mx-auto w-20 h-20 rounded-2xl bg-teal-50 border border-teal-200 shadow-sm flex items-center justify-center mb-3">
-    <carbon-user class="text-3xl text-teal-600" />
-  </div>
-  <div class="text-lg font-bold">少数高手</div>
-  <div class="text-sm opacity-60 mt-1">个体实践涌现<br/>效率提升显著</div>
+<div v-click class="flex-1 rounded-2xl bg-teal-50 border border-teal-200 p-6 shadow-sm flex flex-col items-center justify-center text-center">
+  <carbon-user class="text-4xl mb-3 text-teal-600" />
+  <div class="text-xl font-bold text-teal-800 mb-2">少数高手</div>
+  <div class="text-sm text-teal-600 leading-relaxed">个体实践涌现<br/>效率提升显著</div>
 </div>
 
-<carbon-arrow-right v-click class="text-4xl text-gray-400 flex-shrink-0" />
-
-<div v-click class="flex-1 text-center">
-  <div class="mx-auto w-20 h-20 rounded-2xl bg-green-50 border border-green-200 shadow-sm flex items-center justify-center mb-3">
-    <carbon-events class="text-3xl text-green-600" />
-  </div>
-  <div class="text-lg font-bold">团队共识</div>
-  <div class="text-sm opacity-60 mt-1">Memory/Skill 可沉淀<br/>经验可分享、可复用</div>
+<div v-click class="flex items-center flex-shrink-0">
+  <carbon-arrow-right class="text-3xl text-gray-300" />
 </div>
 
-<carbon-arrow-right v-click class="text-4xl text-gray-400 flex-shrink-0" />
+<div v-click class="flex-1 rounded-2xl bg-emerald-50 border border-emerald-200 p-6 shadow-sm flex flex-col items-center justify-center text-center">
+  <carbon-events class="text-4xl mb-3 text-emerald-600" />
+  <div class="text-xl font-bold text-emerald-800 mb-2">团队共识</div>
+  <div class="text-sm text-emerald-600 leading-relaxed">Memory/Skill 可沉淀<br/>经验可分享、可复用</div>
+</div>
 
-<div v-click class="flex-1 text-center">
-  <div class="mx-auto w-20 h-20 rounded-2xl bg-purple-50 border border-purple-200 shadow-sm flex items-center justify-center mb-3">
-    <carbon-enterprise class="text-3xl text-purple-600" />
-  </div>
-  <div class="text-lg font-bold">组织能力</div>
-  <div class="text-sm opacity-60 mt-1">对齐拉平 AI 格差<br/>制度与工具跟进</div>
+<div v-click class="flex items-center flex-shrink-0">
+  <carbon-arrow-right class="text-3xl text-gray-300" />
+</div>
+
+<div v-click class="flex-1 rounded-2xl bg-purple-50 border border-purple-200 p-6 shadow-sm flex flex-col items-center justify-center text-center">
+  <carbon-enterprise class="text-4xl mb-3 text-purple-600" />
+  <div class="text-xl font-bold text-purple-800 mb-2">组织能力</div>
+  <div class="text-sm text-purple-600 leading-relaxed">对齐拉平 AI 格差<br/>制度与工具跟进</div>
 </div>
 
 </div>
@@ -968,64 +966,101 @@ OpenCode、Pear 也是。允许团队在不同 Harness 之间尝试，
 layout: default
 ---
 
-# Skill 沉淀
+# Memory & Skill 沉淀
 
-<div class="mt-6">
+<div class="mt-2 text-base opacity-60">Memory 整理沉淀，Skill 分享复用——面向未来的基础建设</div>
 
-<div class="text-base mb-6">每次成功都可以沉淀为可复用路径</div>
+<div class="mt-6 grid grid-cols-2 gap-6">
 
-<div class="flex items-center justify-center gap-4 mb-8" v-click>
-  <div class="px-4 py-2 rounded-lg bg-teal-100 text-teal-800 text-sm font-semibold">
-    一次成功
+<div>
+<div v-click class="flex items-center gap-2 mb-3">
+  <carbon-data-structured class="text-xl text-teal-600" />
+  <span class="font-bold text-lg">Memory 分层体系</span>
+</div>
+
+<div v-click class="space-y-2">
+  <div class="flex items-stretch gap-2">
+    <div class="w-1 rounded-full bg-teal-600 flex-shrink-0"></div>
+    <div class="flex-1 px-4 py-2.5 rounded-lg bg-teal-50 border border-teal-200">
+      <div class="font-bold text-teal-800 text-sm">Project Memory</div>
+      <div class="text-xs text-teal-600 mt-0.5">代码风格 · 整体架构 · 技术选型 · 全局共享</div>
+    </div>
   </div>
-  <carbon-arrow-right class="text-xl text-gray-400" />
-  <div class="px-4 py-2 rounded-lg bg-indigo-100 text-indigo-800 text-sm font-semibold">
-    Skill 化
+  <div class="flex items-stretch gap-2">
+    <div class="w-1 rounded-full bg-teal-500 flex-shrink-0"></div>
+    <div class="flex-1 px-4 py-2.5 rounded-lg bg-teal-50 border border-teal-200">
+      <div class="font-bold text-teal-800 text-sm">Module Memory</div>
+      <div class="text-xs text-teal-600 mt-0.5">决策路径 · Spec 变更 · 踩坑记录 · 团队共享</div>
+    </div>
   </div>
-  <carbon-arrow-right class="text-xl text-gray-400" />
-  <div class="px-4 py-2 rounded-lg bg-purple-100 text-purple-800 text-sm font-semibold">
-    团队复用
-  </div>
-  <carbon-arrow-right class="text-xl text-gray-400" />
-  <div class="px-4 py-2 rounded-lg bg-green-100 text-green-800 text-sm font-semibold">
-    节省 Token
+  <div class="flex items-stretch gap-2">
+    <div class="w-1 rounded-full bg-teal-400 flex-shrink-0"></div>
+    <div class="flex-1 px-4 py-2.5 rounded-lg bg-teal-50 border border-teal-200">
+      <div class="font-bold text-teal-800 text-sm">Personal Memory</div>
+      <div class="text-xs text-teal-600 mt-0.5">个人偏好与习惯 · 默认可见 · 鼓励共享</div>
+    </div>
   </div>
 </div>
 
-<div class="grid grid-cols-4 gap-3" v-click>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-template class="text-xl text-teal-500 mb-1" />
-  <div class="font-bold">模板</div>
+<div v-click class="mt-3 text-xs opacity-50 pl-3 border-l-2 border-gray-300 leading-relaxed">
+  逐步替代 Wiki → 本地化文档 + 索引<br/>面向未来的基础建设，让 Agent 主动消费知识
 </div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-notebook class="text-xl text-green-500 mb-1" />
-  <div class="font-bold">Runbook</div>
 </div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-document class="text-xl text-purple-500 mb-1" />
-  <div class="font-bold">FAQ</div>
+
+<div>
+<div v-click class="flex items-center gap-2 mb-3">
+  <carbon-catalog class="text-xl text-purple-600" />
+  <span class="font-bold text-lg">Skill Marketplace</span>
 </div>
-<div class="p-3 rounded-lg bg-gray-50 border text-center text-xs">
-  <carbon-build-tool class="text-xl text-orange-500 mb-1" />
-  <div class="font-bold">脚手架</div>
+
+<div v-click class="space-y-2">
+  <div class="flex items-stretch gap-2">
+    <div class="w-1 rounded-full bg-purple-600 flex-shrink-0"></div>
+    <div class="flex-1 px-4 py-2.5 rounded-lg bg-purple-50 border border-purple-200">
+      <div class="font-bold text-purple-800 text-sm">贡献</div>
+      <div class="text-xs text-purple-600 mt-0.5">成员提交 Skill 到内部平台</div>
+    </div>
+  </div>
+  <div class="flex items-stretch gap-2">
+    <div class="w-1 rounded-full bg-purple-500 flex-shrink-0"></div>
+    <div class="flex-1 px-4 py-2.5 rounded-lg bg-purple-50 border border-purple-200">
+      <div class="font-bold text-purple-800 text-sm">精选</div>
+      <div class="text-xs text-purple-600 mt-0.5">委员会评审，筛选高质量 Skill</div>
+    </div>
+  </div>
+  <div class="flex items-stretch gap-2">
+    <div class="w-1 rounded-full bg-purple-400 flex-shrink-0"></div>
+    <div class="flex-1 px-4 py-2.5 rounded-lg bg-purple-50 border border-purple-200">
+      <div class="font-bold text-purple-800 text-sm">共享</div>
+      <div class="text-xs text-purple-600 mt-0.5">入选 Skill 合入 Repo，团队直接复用</div>
+    </div>
+  </div>
 </div>
 </div>
 
 </div>
 
 <!--
-Skill 沉淀收益。
+这一页讲两件事：Memory 的整理沉淀，和 Skill 的分享复用。
 
-流程 skill 化可节省 token 与重复试错成本。
-每次成功都可以沉淀为 skill：
+[click] 先看 Memory。基本思路是：把 repo 里的决策路径、Spec 修改记录、别人踩过的坑，都整理成结构化的 Memory。
 
-- 模板：标准化的任务描述模板
-- Runbook：标准化的操作手册
-- FAQ：常见问题的标准解答
-- 脚手架：快速启动新项目/新任务的起点
+[click] 三层结构：
+- Project Memory：宏观层面的东西——代码风格、整体架构、技术选型，这些是全局性的约定。
+- Module Memory：具体到每个模块的决策路径、Spec 变更、踩坑记录，粒度更细，以文档形式沉淀并索引。
+- Personal Memory：个人偏好和习惯。这一层也鼓励共享——默认团队成员之间可以看到各自的 Memory。
 
-一次成功 → skill 化 → 团队复用 → 节省 token 和试错成本。
-这是从个人能力到组织能力的桥梁。积累讲完了，最后来看协作。
+[click] 现阶段我们还是基于当前的基建在做这件事，比如传统的 Wiki。但方向是逐步切换到本地化文档加索引的路径，提供更高效的检索方式，进一步共享团队的知识和记忆。
+Memory 不一定现在就有特别大的用处，但它是面向未来的基础建设。Wiki 的问题大家都知道——没人看、更新不及时。而 Memory 可以暴露成 Skill，如果我们用自己的一套编排，在合适的时候让 Agent 自主地去发现和更新这些 Memory，效率会提高非常多。
+
+[click] 再看 Skill。这边更直接——建一个公司内部的 Skill Marketplace。
+
+[click] 流程三步：
+- 贡献：任何成员都可以把成功经验封装成 Skill，提交到内部平台。
+- 精选：委员会评审，筛选高质量的 Skill。
+- 共享：通过评审的 Skill 合入 Repo，团队直接复用。
+
+Memory 做沉淀，Skill 做分享，两条腿走路。
 -->
 
 ---
