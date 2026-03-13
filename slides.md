@@ -1415,6 +1415,106 @@ layout: default
 -->
 
 ---
+layout: default
+---
+
+# 验收自动化：评估剧本
+
+<div class="text-base text-gray-500">端到端验收是 Human-in-the-Loop 最重的一环——把它也自动化</div>
+
+<div class="mt-4">
+
+<div class="grid grid-cols-2 gap-6">
+
+<div>
+<div v-click class="font-bold text-lg mb-3">编写「评估剧本」</div>
+
+<div v-click class="px-5 py-4 rounded-xl bg-gray-100 border border-gray-200 font-mono text-sm leading-loose">
+<span class="text-gray-400">// 好友聊天功能验收</span><br/>
+<span class="text-teal-800">1. <span class="bg-teal-200 text-teal-900 px-1.5 py-0.5 rounded text-xs font-bold">action</span> 点击「好友列表」Tab</span><br/>
+<span class="text-purple-800">2. <span class="bg-purple-200 text-purple-900 px-1.5 py-0.5 rounded text-xs font-bold">eval</span> 列表内有内容填满</span><br/>
+<span class="text-teal-800">3. <span class="bg-teal-200 text-teal-900 px-1.5 py-0.5 rounded text-xs font-bold">action</span> 点击第一个好友头像</span><br/>
+<span class="text-purple-800">4. <span class="bg-purple-200 text-purple-900 px-1.5 py-0.5 rounded text-xs font-bold">eval</span> 画面迁移到聊天详情页</span><br/>
+<span class="text-teal-800">5. <span class="bg-teal-200 text-teal-900 px-1.5 py-0.5 rounded text-xs font-bold">action</span> 发送文字消息 "hello"</span><br/>
+<span class="text-purple-800">6. <span class="bg-purple-200 text-purple-900 px-1.5 py-0.5 rounded text-xs font-bold">eval</span> 消息气泡正常显示</span>
+</div>
+
+<div v-click class="mt-3 text-sm text-gray-500 pl-3 border-l-2 border-gray-300">
+  自然语言写的 UI 测试——人能读、AI 能执行
+</div>
+</div>
+
+<div>
+<div v-click class="font-bold text-lg mb-3">执行与验收</div>
+
+<div v-click class="px-5 py-4 rounded-xl bg-teal-50 border border-teal-200 space-y-2.5">
+  <div class="flex items-center gap-4">
+    <div class="w-8 h-8 rounded-full bg-teal-200 flex items-center justify-center flex-shrink-0 text-sm font-bold text-teal-700">1</div>
+    <div class="font-bold text-base">Simulator 自动操作</div>
+  </div>
+  <div class="flex items-center gap-4">
+    <div class="w-8 h-8 rounded-full bg-teal-200 flex items-center justify-center flex-shrink-0 text-sm font-bold text-teal-700">2</div>
+    <div class="font-bold text-base">自动截图或视频录制</div>
+  </div>
+  <div class="flex items-center gap-4">
+    <div class="w-8 h-8 rounded-full bg-teal-200 flex items-center justify-center flex-shrink-0 text-sm font-bold text-teal-700">3</div>
+    <div class="font-bold text-base">AI 视觉比对，逐步验收</div>
+  </div>
+</div>
+
+<div v-click class="mt-5 px-5 py-3.5 rounded-xl bg-gray-50 border border-gray-200 space-y-2">
+  <div class="flex items-center gap-2 text-base">
+    <carbon-checkmark-filled class="text-teal-500 flex-shrink-0" />
+    <span class="text-teal-800 font-semibold">语义级断言，天然抗 UI 重构</span>
+  </div>
+  <div class="flex items-center gap-2 text-base">
+    <carbon-checkmark-filled class="text-teal-500 flex-shrink-0" />
+    <span class="text-teal-800 font-semibold">非技术人员可直接编写验收标准</span>
+  </div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!--
+端到端的验收，可能是 Human-in-the-Loop 里最重的一块。
+
+以前的流程是：拿到 App 成品后，人工过一遍，新功能是否到位、各种行为是否符合预期。
+这部分目前还是依赖人工参与，成本非常高。
+
+[click] 我们的做法是写「评估剧本」。
+
+[click] 什么是评估剧本？就是用自然语言写的 UI 测试。
+比如：点击好友列表、确认列表有内容、点击某个好友、确认跳转到聊天页、发送一条消息、确认消息正常显示。
+绿色的是操作指令，蓝色的是验收断言。人能读懂、AI 能执行——这就是 BDD 精神在端到端验收上的延伸。
+
+[click] 自然语言写的 UI 测试，人和 AI 都能理解。
+
+[click] 有了剧本，接下来就是执行与验收。
+
+[click] 三步：
+1. 用 Simulator 的自动化操作工具，按照评估剧本把整个过程跑一遍并录制下来。
+2. 在每一步操作后自动截图，形成完整的视觉证据链。
+3. 让 AI 对照评估剧本，逐步检查截图是否符合预期——利用 AI 的视觉能力做自动验收。
+
+这样即使需要人工确认，人看到的也是截图和录屏，而不是让人去手动操作一遍。
+大部分情况下 AI 视觉比对就能直接通过，人只需要在异常时介入。
+
+[click] 这和传统 UI Test 有什么本质区别？两个关键点：
+
+第一，语义级断言，天然抗 UI 重构。
+传统 UI Test 的断言是 XCTAssert(label.text == "hello")，绑定控件 ID 和精确文本。UI 一重构，测试就挂。
+评估剧本的断言是「消息气泡正常显示」——AI 通过视觉判断"看起来对不对"，跟人的验收方式一样。
+只要产品行为没变，剧本就是稳定的，不需要随代码变更而维护。
+
+第二，非技术人员可以直接编写验收标准。
+传统 UI Test 只有开发者能写。评估剧本是自然语言，PM、QA、Designer 都能直接写。
+这打通了"需求方直接定义验收条件"的最后一环——真正的 BDD 落地。
+-->
+
+---
 layout: two-cols-header
 ---
 
