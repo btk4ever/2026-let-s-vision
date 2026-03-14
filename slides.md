@@ -1687,7 +1687,16 @@ layout: end
 ---
 
 <div class="text-center">
-  <div class="text-2xl font-bold mb-6">Thank You!</div>
+  <div class="text-2xl font-bold mb-8">Thank You!</div>
+
+  <div class="flex items-center justify-center gap-6 text-base text-slate-400 mb-10">
+    <span>定义边界</span>
+    <span class="text-teal-400">·</span>
+    <span>沉淀实践</span>
+    <span class="text-teal-400">·</span>
+    <span>让 Agent 闭环</span>
+  </div>
+
   <div class="text-base opacity-70 mb-2">Wei Wang</div>
   <div class="flex items-center justify-center gap-4 text-sm opacity-50">
     <span><carbon-logo-x class="inline mr-1" />@onevcat</span>
