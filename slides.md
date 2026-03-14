@@ -255,7 +255,7 @@ layout: default
   <div class="flex items-center gap-6">
     <img src="/1_weekly_pr_count.png" class="w-1/2 rounded-lg shadow-sm" />
     <div>
-      <div class="text-lg font-bold text-slate-600">PR 粒度在变大</div>
+      <div class="text-3xl font-black text-slate-700">粒度在变大</div>
       <div class="text-sm text-slate-400 mt-1">总量稳定，单 PR 改动量增加</div>
     </div>
   </div>
