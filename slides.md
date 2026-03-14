@@ -975,41 +975,56 @@ layout: default
 -->
 
 ---
-layout: default
+layout: center
+clicks: 3
 ---
 
-# 约束三：协作范式在变
+<div class="absolute inset-0 flex overflow-hidden">
 
-<div class="mt-6">
-
-<div class="grid grid-cols-2 gap-8">
-<div class="p-8 rounded-xl bg-gray-50 border border-gray-200 text-center" v-click>
-  <div class="text-base text-gray-500 mb-2">当前</div>
-  <div class="text-xl font-bold mb-4">人 → 多 Agent</div>
-  <carbon-user class="text-3xl text-teal-500 mx-1" />
-  <carbon-arrow-right class="text-2xl text-gray-400 mx-1" />
-  <carbon-bot class="text-3xl text-gray-500 mx-1" />
-  <carbon-bot class="text-3xl text-gray-500 mx-1" />
-  <carbon-bot class="text-3xl text-gray-500 mx-1" />
-  <div class="text-sm text-gray-500 mt-4">人工编排，注意力是瓶颈</div>
+<!-- Left: Current (muted) -->
+<div class="w-[38%] bg-slate-50 flex flex-col items-center justify-center px-8 transition-all duration-700"
+  :class="$clicks >= 1 ? 'opacity-100' : 'opacity-0'">
+  <div class="text-xs font-bold text-slate-400 tracking-[0.2em] uppercase mb-4">当前</div>
+  <div class="text-xl font-bold text-slate-500 mb-5">人 → 多 Agent</div>
+  <div class="flex items-center gap-1.5">
+    <carbon-user class="text-2xl text-slate-400" />
+    <carbon-arrow-right class="text-lg text-slate-300" />
+    <carbon-bot class="text-2xl text-slate-300" />
+    <carbon-bot class="text-2xl text-slate-300" />
+    <carbon-bot class="text-2xl text-slate-300" />
+  </div>
+  <div class="text-sm text-slate-400 mt-4 text-center">人工编排<br/>注意力是瓶颈</div>
 </div>
 
-<div class="p-8 rounded-xl bg-teal-50 border border-teal-200 text-center" v-click>
-  <div class="text-base text-teal-600 mb-2">下一阶段</div>
-  <div class="text-xl font-bold text-teal-800 mb-4">Agent ↔ Agent</div>
-  <carbon-bot class="text-3xl text-teal-500 mx-1" />
-  <carbon-connect class="text-2xl text-teal-400 mx-1" />
-  <carbon-bot class="text-3xl text-teal-500 mx-1" />
-  <carbon-connect class="text-2xl text-teal-400 mx-1" />
-  <carbon-bot class="text-3xl text-teal-500 mx-1" />
-  <div class="text-sm text-teal-700 mt-4">自协作，人做策略与兜底</div>
-</div>
+<!-- Divider -->
+<div class="w-px bg-slate-200 self-stretch"></div>
+
+<!-- Right: Future (bold) -->
+<div class="flex-1 flex flex-col items-center justify-center px-10 transition-all duration-700"
+  :class="$clicks >= 2 ? 'opacity-100' : 'opacity-0'">
+  <div class="text-xs font-bold text-teal-500 tracking-[0.2em] uppercase mb-4">下一阶段</div>
+  <div class="text-[4.5rem] font-black text-teal-700 leading-none tracking-tight">Agent ↔ Agent</div>
+  <div class="flex items-center gap-2 mt-6">
+    <carbon-bot class="text-2xl text-teal-500" />
+    <carbon-connect class="text-lg text-teal-400" />
+    <carbon-bot class="text-2xl text-teal-500" />
+    <carbon-connect class="text-lg text-teal-400" />
+    <carbon-bot class="text-2xl text-teal-500" />
+  </div>
+  <div class="text-base text-teal-600 mt-4">自协作，人做策略与兜底</div>
 </div>
 
-<div class="mt-6 text-center text-base text-gray-500" v-click>
+</div>
+
+<!-- Title -->
+<div class="absolute top-6 left-8 z-10">
+  <div class="text-lg font-bold text-slate-800">约束三：协作范式在变</div>
+</div>
+
+<!-- Bottom -->
+<div class="absolute bottom-8 left-0 right-0 text-center text-base text-slate-400 transition-opacity duration-500"
+  :class="$clicks >= 3 ? 'opacity-100' : 'opacity-0'">
   直接驱动因子：开发者注意力稀缺
-</div>
-
 </div>
 
 <!--
