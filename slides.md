@@ -586,25 +586,32 @@ layout: default
 
 <div class="mt-2 text-base text-gray-500 mb-6">只给模型它真正需要的</div>
 
-<div class="grid grid-cols-3 gap-5 mt-4">
-<div class="p-5 rounded-lg bg-teal-50 border border-teal-100" v-click>
-  <carbon-document class="text-3xl text-teal-500 mb-3" />
-  <div class="font-bold text-lg">AGENTS.md 极简化</div>
-  <div class="text-sm text-gray-500 mt-2">≤ 100 行，只写领域知识</div>
-  <div class="text-sm text-gray-500 mt-1">行为式引用 · 渐进式披露</div>
+<div class="mt-6 space-y-7">
+
+<div v-click>
+  <div class="flex items-center gap-2 mb-1">
+    <carbon-document class="text-xl text-teal-600" />
+    <span class="font-bold text-lg">AGENTS.md 极简化</span>
+  </div>
+  <div class="text-base text-slate-500 ml-7">≤ 100 行，只写领域知识 · 行为式引用 · 渐进式披露</div>
 </div>
-<div class="p-5 rounded-lg bg-teal-50 border border-teal-100" v-click>
-  <carbon-terminal class="text-3xl text-teal-500 mb-3" />
-  <div class="font-bold text-lg">辅助脚本和工具</div>
-  <div class="text-sm text-gray-500 mt-2">模块和架构查找</div>
-  <div class="text-sm text-gray-500 mt-1">简化输出等</div>
+
+<div v-click>
+  <div class="flex items-center gap-2 mb-1">
+    <carbon-terminal class="text-xl text-teal-600" />
+    <span class="font-bold text-lg">辅助脚本和工具</span>
+  </div>
+  <div class="text-base text-slate-500 ml-7">模块和架构查找 · 为 Agent 优化工具输出</div>
 </div>
-<div class="p-5 rounded-lg bg-teal-50 border border-teal-100" v-click>
-  <carbon-machine-learning-model class="text-3xl text-teal-500 mb-3" />
-  <div class="font-bold text-lg">选择顶级模型</div>
-  <div class="text-sm text-gray-500 mt-2">推理密集 ≠ 省 token 的地方</div>
-  <div class="text-sm text-gray-500 mt-1">弱模型 → 错误积累 → 返工</div>
+
+<div v-click>
+  <div class="flex items-center gap-2 mb-1">
+    <carbon-machine-learning-model class="text-xl text-teal-600" />
+    <span class="font-bold text-lg">选择顶级模型</span>
+  </div>
+  <div class="text-base text-slate-500 ml-7">推理密集 ≠ 省 token 的地方 · 弱模型 → 错误积累 → 返工</div>
 </div>
+
 </div>
 
 <!--
@@ -653,15 +660,21 @@ clicks: 2
 </div>
 
 <div :class="[$clicks >= 2 ? 'opacity-100' : 'opacity-0', 'transition-opacity duration-500']">
-<div class="mt-6 grid grid-cols-2 gap-4">
-<div class="p-4 rounded-lg bg-teal-50 border border-teal-100 text-center">
-  <div class="font-bold"><carbon-bot class="inline text-teal-500 mr-1" />Sub-agent 协作</div>
-  <div class="text-sm text-gray-500 mt-1">有帮助，但合理拆分 > 堆 agent</div>
-</div>
-<div class="p-4 rounded-lg bg-teal-50 border border-teal-100 text-center">
-  <div class="font-bold"><carbon-renew class="inline text-teal-500 mr-1" />新开 Thread</div>
-  <div class="text-sm text-gray-500 mt-1">一个任务一个会话，避免历史污染</div>
-</div>
+<div class="mt-6 flex gap-10">
+  <div class="flex items-start gap-2">
+    <carbon-bot class="text-xl text-teal-500 mt-0.5 flex-shrink-0" />
+    <div>
+      <div class="font-bold">Sub-agent 协作</div>
+      <div class="text-sm text-slate-500 mt-0.5">有帮助，但合理拆分 > 堆 agent</div>
+    </div>
+  </div>
+  <div class="flex items-start gap-2">
+    <carbon-renew class="text-xl text-teal-500 mt-0.5 flex-shrink-0" />
+    <div>
+      <div class="font-bold">新开 Thread</div>
+      <div class="text-sm text-slate-500 mt-0.5">一个任务一个会话，避免历史污染</div>
+    </div>
+  </div>
 </div>
 </div>
 
