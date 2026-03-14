@@ -1280,7 +1280,7 @@ layout: default
 </div>
 
 <!-- Reasoning (left) → Conclusion (right) -->
-<div class="mt-8 flex items-center gap-8 max-w-4xl">
+<div class="mt-8 flex items-center gap-6">
 
   <div class="flex-1 space-y-5">
     <div v-click class="flex items-start gap-3">
@@ -1298,8 +1298,6 @@ layout: default
       </div>
     </div>
   </div>
-
-  <carbon-arrow-right class="text-2xl text-teal-300 flex-shrink-0" />
 
   <div v-click class="flex-shrink-0 pl-6 border-l-3 border-teal-400 py-2">
     <div class="text-2xl font-black text-slate-800">开发者的新任务</div>
