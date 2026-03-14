@@ -1572,7 +1572,7 @@ layout: default
 <div class="mt-8 space-y-6">
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-slate-200 leading-none w-10 text-right flex-shrink-0">1</span>
+  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-right flex-shrink-0">1</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">挑选靠谱的模型商</div>
     <div class="text-sm text-slate-500 mt-1">完善 API · 稳定 SLA · 关注上下文窗口和工具调用能力 · 企业级先确认合规</div>
@@ -1580,7 +1580,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-slate-200 leading-none w-10 text-right flex-shrink-0">2</span>
+  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-right flex-shrink-0">2</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">大量消耗 Token 做实践</div>
     <div class="text-sm text-slate-500 mt-1">设使用目标而非限制 · A/B 对比建立直觉 · 刻意试探失败边界</div>
@@ -1588,7 +1588,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-slate-200 leading-none w-10 text-right flex-shrink-0">3</span>
+  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-right flex-shrink-0">3</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">将现有工作流迁移到 AI</div>
     <div class="text-sm text-slate-500 mt-1">从重复性工作入手 · 先辅助再主导 · 建立前后效果对照，用数据说服团队</div>
@@ -1596,7 +1596,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-slate-200 leading-none w-10 text-right flex-shrink-0">4</span>
+  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-right flex-shrink-0">4</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">不要过度纠结工具选型</div>
     <div class="text-sm text-slate-500 mt-1">工具在快速迭代 · 重要的是建立与 AI 协作的思维模式</div>
@@ -1624,7 +1624,7 @@ layout: default
 <div class="mt-8 space-y-6">
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-slate-700 leading-none w-10 text-right flex-shrink-0">1</span>
+  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-right flex-shrink-0">1</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">建立团队 Harness 评测体系</div>
     <div class="text-sm text-slate-500 mt-1">自建 benchmark · 评测 → 调优闭环 · domain 知识驱动</div>
@@ -1632,7 +1632,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-slate-700 leading-none w-10 text-right flex-shrink-0">2</span>
+  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-right flex-shrink-0">2</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">团队经验沉淀</div>
     <div class="text-sm text-slate-500 mt-1">prompt/skill 共享 · AI 协作案例库 · 定期分享缩小格差</div>
@@ -1640,7 +1640,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-slate-700 leading-none w-10 text-right flex-shrink-0">3</span>
+  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-right flex-shrink-0">3</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">开始构建验收自动化</div>
     <div class="text-sm text-slate-500 mt-1">核心路径写评估剧本 · 变更 → 验证 → 回归 · 逐步扩大自主验收</div>
@@ -1648,7 +1648,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-slate-700 leading-none w-10 text-right flex-shrink-0">4</span>
+  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-right flex-shrink-0">4</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">让基础设施变得 Agent-friendly</div>
     <div class="text-sm text-slate-500 mt-1">文档从给人看到给 Agent 消费 · 知识结构化 · 工具 CLI/API 化</div>
