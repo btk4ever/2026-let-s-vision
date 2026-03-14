@@ -1110,47 +1110,45 @@ layout: default
 
 # 去掉起点：自动触发
 
-<div class="mt-2 text-base text-gray-500">CI/CD 时代的成熟工具链，可直接复用</div>
+<div class="mt-16 text-center">
 
-<div class="mt-8 space-y-4">
+  <div class="text-3xl font-bold text-slate-700">CI/CD 时代的成熟工具链，直接复用</div>
 
-<div v-click class="flex items-stretch gap-3">
-  <div class="w-1.5 rounded-full bg-teal-600 flex-shrink-0"></div>
-  <div class="flex-1 px-5 py-4 rounded-xl bg-teal-50 border border-teal-200">
-    <div class="font-bold text-teal-800 text-base">Webhook 事件触发</div>
-    <div class="text-sm text-teal-600 mt-1">PR 提交、Issue 创建、Code Review 请求 → 自动启动 Agent</div>
+  <div v-click class="mt-12 flex items-start justify-center gap-10">
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-teal-50 border border-teal-200">
+        <carbon-flash class="text-xl text-teal-500" />
+        <span class="font-semibold text-teal-700">Webhook 事件</span>
+      </div>
+      <div class="text-sm text-slate-400 mt-2.5">PR · Issue · Review</div>
+    </div>
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-teal-50 border border-teal-200">
+        <carbon-time class="text-xl text-teal-500" />
+        <span class="font-semibold text-teal-700">Cron 定时</span>
+      </div>
+      <div class="text-sm text-slate-400 mt-2.5">巡检 · 清理 · 更新</div>
+    </div>
+    <div class="text-center">
+      <div class="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-teal-50 border border-teal-200">
+        <carbon-flow class="text-xl text-teal-500" />
+        <span class="font-semibold text-teal-700">Pipeline 级联</span>
+      </div>
+      <div class="text-sm text-slate-400 mt-2.5">CI 失败 · 上游变更</div>
+    </div>
   </div>
-</div>
 
-<div v-click class="flex items-stretch gap-3">
-  <div class="w-1.5 rounded-full bg-teal-500 flex-shrink-0"></div>
-  <div class="flex-1 px-5 py-4 rounded-xl bg-teal-50 border border-teal-200">
-    <div class="font-bold text-teal-800 text-base">Cron 定时触发</div>
-    <div class="text-sm text-teal-600 mt-1">Backlog 清理、依赖更新、自动化重构 → 无人坚守的持续改进</div>
+  <div v-click class="mt-14 text-lg text-slate-400">
+    事件发生时 Agent 自动响应——接下来看更关键的<strong class="text-slate-600">终点</strong>
   </div>
-</div>
 
-<div v-click class="flex items-stretch gap-3">
-  <div class="w-1.5 rounded-full bg-teal-400 flex-shrink-0"></div>
-  <div class="flex-1 px-5 py-4 rounded-xl bg-teal-50 border border-teal-200">
-    <div class="font-bold text-teal-800 text-base">Pipeline 上游触发</div>
-    <div class="text-sm text-teal-600 mt-1">CI 失败自动修复、构建完成触发部署、上游变更级联更新</div>
-  </div>
-</div>
-
-</div>
-
-<div v-click class="mt-8 text-xl text-center text-slate-400">
-  不需要人坐到电脑前——事件发生时，<strong class="text-slate-600">Agent 自动响应</strong>
 </div>
 
 <!--
-- 去掉起点，CI/CD 成熟工具链可复用
-- [click] Webhook 事件触发：PR/Issue/Review → 自动启动 Agent
-- [click] Cron 定时触发：巡检/清理/更新，无人坚守
-- [click] Pipeline 上游触发：CI 失败自动修复，上游变更级联
-- [click] 事件发生时 Agent 自动响应，不需人坐到电脑前
-- 起点相对容易 → 接下来看终点
+- 去掉起点：CI/CD 成熟工具链直接复用
+- [click] 三种触发方式：Webhook 事件 / Cron 定时 / Pipeline 级联
+- 起点相对简单，现有基建可覆盖
+- [click] 接下来看真正的难点——终点的自动验收
 -->
 
 ---
@@ -1161,45 +1159,67 @@ layout: default
 
 <div class="mt-2 text-base text-gray-500">验收标准前置，让 Agent 自证完成</div>
 
-<div class="mt-8 space-y-4">
+<div v-click class="mt-10 flex items-start justify-center gap-4">
 
-<div v-click class="flex items-stretch gap-3">
-  <div class="w-1.5 rounded-full bg-purple-600 flex-shrink-0"></div>
-  <div class="flex-1 px-5 py-4 rounded-xl bg-purple-50 border border-purple-200">
-    <div class="font-bold text-purple-800 text-base">测试守门</div>
-    <div class="text-sm text-purple-600 mt-1">单元 / 集成 / UI 测试全部通过 → 前置门槛</div>
+  <div class="text-center w-28">
+    <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center mx-auto">
+      <carbon-application class="text-3xl text-purple-600" />
+    </div>
+    <div class="font-bold text-sm mt-3 text-slate-700">运行 App</div>
+    <div class="text-xs text-slate-400 mt-0.5">Simulator 自动启动</div>
   </div>
-</div>
 
-<div v-click class="flex items-stretch gap-3">
-  <div class="w-1.5 rounded-full bg-purple-500 flex-shrink-0"></div>
-  <div class="flex-1 px-5 py-4 rounded-xl bg-purple-50 border border-purple-200">
-    <div class="font-bold text-purple-800 text-base">Agent Review</div>
-    <div class="text-sm text-purple-600 mt-1">用另一个 Agent 做 Code Review → 交叉验证</div>
+  <div class="h-16 flex items-center flex-shrink-0">
+    <carbon-arrow-right class="text-xl text-purple-300" />
   </div>
-</div>
 
-<div v-click class="flex items-stretch gap-3">
-  <div class="w-1.5 rounded-full bg-purple-400 flex-shrink-0"></div>
-  <div class="flex-1 px-5 py-4 rounded-xl bg-purple-50 border border-purple-200">
-    <div class="font-bold text-purple-800 text-base">视觉验证</div>
-    <div class="text-sm text-purple-600 mt-1">自动跑起 App、按需自动操作、截图 / 录屏 → 自然语言断言的 E2E 测试</div>
+  <div class="text-center w-28">
+    <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center mx-auto">
+      <carbon-touch-interaction class="text-3xl text-purple-600" />
+    </div>
+    <div class="font-bold text-sm mt-3 text-slate-700">按剧本操作</div>
+    <div class="text-xs text-slate-400 mt-0.5">a11y · Vision 驱动</div>
   </div>
-</div>
+
+  <div class="h-16 flex items-center flex-shrink-0">
+    <carbon-arrow-right class="text-xl text-purple-300" />
+  </div>
+
+  <div class="text-center w-28">
+    <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center mx-auto">
+      <carbon-camera class="text-3xl text-purple-600" />
+    </div>
+    <div class="font-bold text-sm mt-3 text-slate-700">截图 / 录屏</div>
+    <div class="text-xs text-slate-400 mt-0.5">关键帧捕获</div>
+  </div>
+
+  <div class="h-16 flex items-center flex-shrink-0">
+    <carbon-arrow-right class="text-xl text-purple-300" />
+  </div>
+
+  <div class="text-center w-28">
+    <div class="w-16 h-16 rounded-2xl bg-teal-100 flex items-center justify-center mx-auto">
+      <carbon-checkmark-outline class="text-3xl text-teal-600" />
+    </div>
+    <div class="font-bold text-sm mt-3 text-slate-700">AI 语义断言</div>
+    <div class="text-xs text-slate-400 mt-0.5">自然语言验收</div>
+  </div>
 
 </div>
 
-<div v-click class="mt-8 mx-auto pl-5 border-l-3 border-purple-300 text-xl text-gray-500" style="max-width: 80%;">
-  先定义「怎么算做完」，再开始做——人只在异常时介入
+<div v-click class="mt-10 text-center">
+  <div class="text-2xl font-bold text-slate-700">先定义「怎么算做完」，再开始做</div>
+  <div class="mt-3 text-base text-slate-400">人只在异常时介入——接下来看 BDD 如何落地 <carbon-arrow-right class="inline text-teal-400" /></div>
 </div>
 
 <!--
 - 去掉终点，验收标准前置，Agent 自证完成
-- [click] 测试守门：单元/集成/UI 全通过 = 前置门槛
-- [click] Agent Review：独立 Agent 做 Code Review，交叉验证
-- [click] 视觉验证：自动跑 App + 截图/录屏 + AI 视觉比对
-- [click] 原则：先定义"怎么算做完"，再开始做
+- [click] 视觉验收的核心流程：
+  - 自动启动 Simulator → 按剧本操作（a11y/Vision）→ 截图录屏 → AI 语义断言
+  - 这就是我们在探索的"视觉验证"路径
+- [click] 核心原则：先定义"怎么算做完"，再开始做
 - 人只在异常时介入
+- 接下来进入具体实践——BDD 如何落地
 -->
 
 ---
@@ -1280,7 +1300,7 @@ layout: default
 </div>
 
 <!-- Reasoning (left) → Conclusion (right) -->
-<div class="mt-8 flex items-center gap-6">
+<div class="mt-8 flex items-center gap-8">
 
   <div class="flex-1 space-y-5">
     <div v-click class="flex items-start gap-3">
@@ -1299,9 +1319,9 @@ layout: default
     </div>
   </div>
 
-  <div v-click class="flex-shrink-0 pl-6 border-l-3 border-teal-400 py-2">
+  <div v-click class="flex-1 pl-6 border-l-3 border-teal-400 py-2">
     <div class="text-2xl font-black text-slate-800">开发者的新任务</div>
-    <div class="text-lg text-teal-600 mt-2 font-semibold">把 Idea 翻译成<br/>可自动化测试的案例</div>
+    <div class="text-lg text-teal-600 mt-2 font-semibold">把 Idea 翻译成可自动化测试的案例</div>
   </div>
 
 </div>
