@@ -1280,7 +1280,7 @@ layout: default
 </div>
 
 <!-- Reasoning (left) → Conclusion (right) -->
-<div class="mt-8 flex items-center gap-8">
+<div class="mt-8 flex items-center gap-8 max-w-4xl">
 
   <div class="flex-1 space-y-5">
     <div v-click class="flex items-start gap-3">
