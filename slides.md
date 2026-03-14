@@ -1621,47 +1621,36 @@ layout: default
 
 <div class="text-base text-slate-400 -mt-2">针对已有实践经验、希望进一步提升的团队</div>
 
-<div class="mt-8 space-y-1">
+<div class="mt-8 space-y-6">
 
-<div class="flex items-stretch gap-4" v-click>
-  <div class="flex flex-col items-center">
-    <div class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
-    <div class="w-0.5 flex-1 bg-slate-200 mt-1"></div>
-  </div>
-  <div class="pb-5">
-    <div class="font-bold text-lg text-slate-800">建立团队 Harness 评测体系</div>
+<div class="flex items-start gap-5" v-click>
+  <span class="text-[2.5rem] font-black text-slate-700 leading-none w-10 text-right flex-shrink-0">1</span>
+  <div class="pt-1">
+    <div class="text-lg font-bold text-slate-800">建立团队 Harness 评测体系</div>
     <div class="text-sm text-slate-500 mt-1">自建 benchmark · 评测 → 调优闭环 · domain 知识驱动</div>
   </div>
 </div>
 
-<div class="flex items-stretch gap-4" v-click>
-  <div class="flex flex-col items-center">
-    <div class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
-    <div class="w-0.5 flex-1 bg-slate-200 mt-1"></div>
-  </div>
-  <div class="pb-5">
-    <div class="font-bold text-lg text-slate-800">团队经验沉淀</div>
+<div class="flex items-start gap-5" v-click>
+  <span class="text-[2.5rem] font-black text-slate-700 leading-none w-10 text-right flex-shrink-0">2</span>
+  <div class="pt-1">
+    <div class="text-lg font-bold text-slate-800">团队经验沉淀</div>
     <div class="text-sm text-slate-500 mt-1">prompt/skill 共享 · AI 协作案例库 · 定期分享缩小格差</div>
   </div>
 </div>
 
-<div class="flex items-stretch gap-4" v-click>
-  <div class="flex flex-col items-center">
-    <div class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
-    <div class="w-0.5 flex-1 bg-slate-200 mt-1"></div>
-  </div>
-  <div class="pb-5">
-    <div class="font-bold text-lg text-slate-800">开始构建验收自动化</div>
+<div class="flex items-start gap-5" v-click>
+  <span class="text-[2.5rem] font-black text-slate-700 leading-none w-10 text-right flex-shrink-0">3</span>
+  <div class="pt-1">
+    <div class="text-lg font-bold text-slate-800">开始构建验收自动化</div>
     <div class="text-sm text-slate-500 mt-1">核心路径写评估剧本 · 变更 → 验证 → 回归 · 逐步扩大自主验收</div>
   </div>
 </div>
 
-<div class="flex items-stretch gap-4" v-click>
-  <div class="flex flex-col items-center">
-    <div class="w-8 h-8 rounded-full bg-slate-800 text-white flex items-center justify-center text-sm font-bold flex-shrink-0">4</div>
-  </div>
-  <div>
-    <div class="font-bold text-lg text-slate-800">让基础设施变得 Agent-friendly</div>
+<div class="flex items-start gap-5" v-click>
+  <span class="text-[2.5rem] font-black text-slate-700 leading-none w-10 text-right flex-shrink-0">4</span>
+  <div class="pt-1">
+    <div class="text-lg font-bold text-slate-800">让基础设施变得 Agent-friendly</div>
     <div class="text-sm text-slate-500 mt-1">文档从给人看到给 Agent 消费 · 知识结构化 · 工具 CLI/API 化</div>
   </div>
 </div>
