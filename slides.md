@@ -249,58 +249,52 @@ layout: default
 layout: default
 ---
 
-# 每周 PR 数量 <carbon-chart-line class="inline text-slate-400" />
+# PR 趋势 <carbon-chart-line class="inline text-slate-400" />
 
-<img src="/1_weekly_pr_count.png" class="w-full mt-4 rounded-lg shadow-sm" />
-
-<div class="mt-4 text-base text-slate-400">
-  PR 总量保持稳定，趋势线微降——<strong class="text-slate-600">不是产出变少了，而是 PR 粒度在变大</strong>
+<div class="mt-4 grid grid-cols-2 gap-5">
+  <div>
+    <div class="text-sm font-semibold text-slate-500 mb-2">每周 PR 数量</div>
+    <img src="/1_weekly_pr_count.png" class="w-full rounded-lg shadow-sm" />
+    <div class="mt-2 text-sm text-slate-400"><strong class="text-slate-600">粒度在变大</strong> — 总量稳定，单 PR 改动量增加</div>
+  </div>
+  <div>
+    <div class="text-sm font-semibold text-slate-500 mb-2">PR 合并效率</div>
+    <img src="/2_monthly_merge_time.png" class="w-full rounded-lg shadow-sm" />
+    <div class="mt-2 text-sm text-slate-400"><strong class="text-slate-600">Review 效率倍增</strong> — 均值 51h → 20h</div>
+  </div>
 </div>
 
 <!--
-- 趋势图：每周 PR 数量
-- 趋势线微降，整体量级稳定
-- 不是产出少了——PR 粒度在变大
-- Agent 一次完成更完整的任务，单 PR 改动量增加
-- 生产模式在变化
+- PR 两个维度并列对比
+- 左：PR 数量稳定，粒度变大——Agent 一次完成更完整的任务
+- 右：合并时间大幅缩短——AI 生成的 PR 更规范，Review 更快
+- 快速带过，为下一页的冲击数据蓄势
 -->
 
 ---
 layout: default
 ---
 
-# PR 合并效率 <carbon-chart-line class="inline text-slate-400" />
+# AI 协作占比
 
-<img src="/2_monthly_merge_time.png" class="w-full mt-4 rounded-lg shadow-sm" />
-
-<div class="mt-4 text-base text-slate-400">
-  均值从 50+ 小时降至 20 小时，中位数降至个位——<strong class="text-slate-600">Review 效率在倍增</strong>
+<div class="mt-4 flex items-start gap-8">
+  <div class="flex-shrink-0">
+    <div class="text-sm font-semibold text-slate-400 mb-2">半年变化</div>
+    <div class="flex items-baseline gap-3">
+      <span class="text-5xl font-black text-slate-300">1%</span>
+      <span class="text-2xl text-slate-300">→</span>
+      <span class="text-[5rem] font-black text-teal-600 leading-none">40%</span>
+    </div>
+    <div class="mt-3 text-base text-slate-500">AI Co-Authored PR 占比<br/>从尝鲜变为常态</div>
+  </div>
+  <img src="/3_ai_coauthor_trend.png" class="flex-1 rounded-lg shadow-sm mt-1" />
 </div>
 
 <!--
-- 趋势图：PR 平均合并时间
-- 均值 51h → 20h，中位数降至 6.5h
-- AI 生成的 PR 更规范、更容易 review
-- 团队适应新节奏：从"等人看"到主动快速验收
--->
-
----
-layout: default
----
-
-# AI 协作占比 <carbon-chart-line class="inline text-slate-400" />
-
-<img src="/3_ai_coauthor_trend.png" class="w-full mt-4 rounded-lg shadow-sm" />
-
-<div class="mt-4 text-base text-slate-400">
-  半年内从 1% 飙升至 40%——<strong class="text-slate-600">AI 协作已从尝鲜变为常态</strong>
-</div>
-
-<!--
-- 趋势图：AI Co-Authored PR 占比
-- 半年：1.1% → 39.8%，近 40 倍
-- 指数型增长，2025 年底加速
-- 与模型能力台阶式提升吻合
+- 冲击页：半年内 1% → 40%，近 40 倍增长
+- 左侧大字排版制造视觉冲击
+- 右侧趋势图提供佐证
+- 指数型增长，与模型能力台阶式提升吻合
 - 从少数人尝鲜变成团队日常
 -->
 
