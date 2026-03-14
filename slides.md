@@ -1022,7 +1022,7 @@ clicks: 3
 </div>
 
 <!-- Bottom -->
-<div class="absolute bottom-8 left-0 right-0 text-center text-base text-slate-400 transition-opacity duration-500"
+<div class="absolute bottom-8 right-10 text-base text-slate-400 transition-opacity duration-500"
   :class="$clicks >= 3 ? 'opacity-100' : 'opacity-0'">
   直接驱动因子：开发者注意力稀缺
 </div>
