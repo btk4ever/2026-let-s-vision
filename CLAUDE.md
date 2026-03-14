@@ -60,3 +60,28 @@ pnpm export     # 导出幻灯片为 PDF
 - 推荐使用 `slidev` skill 操作和修改，特别是在 layout 和动画时，使用推荐的方式确保符合slidev最佳实践
 - 在遇到排版等设计选择时，可以询问 `ui-ux-pro-max` 的意见
 - 可以自行扩展 components，使用 Vue 组件呈现精致且让人惊叹的演示效果
+
+## Design Context
+
+### Users
+技术会议（2026.03 上海）的开发者听众，多为有经验的工程师，对 AI/Agent 话题有实践兴趣。他们期望从演讲中获得可落地的 Agentic Engineering 方法论，而非概念科普。
+
+### Brand Personality
+**务实 · 前沿 · 精致**（Pragmatic · Cutting-edge · Refined）
+
+情绪目标：理性克制的专业感打底，同时传递技术前沿的探索兴奋。不贩卖焦虑，用数据和实践说话。
+
+### Aesthetic Direction
+- **视觉基调**：简洁精致的浅色主题，注重排版细节、间距考究、层级分明
+- **主色**：Teal (#14b8a6) 贯穿全局，代表 Agent/自动化；Amber 代表规则/规范，Violet 代表知识/记忆
+- **字体**：Space Grotesk (sans) + DM Sans (serif) + Fira Code (mono)，权重对比制造层级
+- **动效**：克制有目的，用于揭示信息节奏（v-click 逐步展示），拒绝装饰性动画
+- **参考方向**：Apple Keynote 的留白与节奏感，Stripe 文档的排版精度
+- **反面参考**：企业蓝色渐变 PPT、彩虹配色炫技风、学术论文密排文字
+
+### Design Principles
+1. **Less but better** — 每页只传递一个核心信息，用留白而非填充来制造重点
+2. **Color is semantic** — 颜色承载含义（teal=agent, amber=spec, violet=memory），不做纯装饰用色
+3. **Typography drives hierarchy** — 通过字重（600–900）和尺寸对比建立视觉层级，而非依赖色彩或边框
+4. **Motion reveals, not decorates** — 动画服务于信息揭示节奏，每个动效都应有叙事目的
+5. **Refined details, not complexity** — 追求间距、对齐、阴影等细节的精致，但拒绝过度设计

@@ -208,22 +208,30 @@ layout: default
 
 # 规模背景
 
-<div class="mt-6 grid grid-cols-4 gap-6">
-  <StatCard value="Swift + ObjC" label="实现语言" v-click>
-    <template #icon><logos-swift class="inline" /> <span class="opacity-30 mx-1">/</span> <span class="text-purple-700 text-2xl font-extrabold leading-none" style="font-family: 'Fira Code', monospace">.m</span></template>
-  </StatCard>
-  <StatCard value="~250 万" label="代码行数" v-click>
-    <template #icon><carbon-code class="inline" /></template>
-  </StatCard>
-  <StatCard value="~650" label="模块" v-click>
-    <template #icon><carbon-assembly-cluster class="inline" /></template>
-  </StatCard>
-  <StatCard value="~25,000" label="文件" v-click>
-    <template #icon><carbon-document class="inline" /></template>
-  </StatCard>
+<div v-click class="mt-4 flex items-center gap-2.5 text-lg font-semibold text-slate-400">
+  <logos-swift class="text-xl" /> Swift + Objective-C
 </div>
 
-<div class="mt-6 text-lg opacity-60 text-center" v-click>
+<div v-click>
+  <div class="mt-5 flex items-baseline">
+    <span class="text-[7rem] font-black leading-none tracking-tighter"><span class="text-slate-300">~</span><span class="text-slate-800">250</span></span>
+    <span class="text-2xl font-bold text-slate-400 ml-3">万行代码</span>
+  </div>
+  <div class="w-16 h-1 bg-slate-200 rounded-full mt-6 mb-8"></div>
+</div>
+
+<div class="flex gap-16">
+  <div v-click class="flex items-baseline gap-2">
+    <span class="text-4xl font-black text-slate-600 tracking-tight">~650</span>
+    <span class="text-base text-slate-400">模块</span>
+  </div>
+  <div v-click class="flex items-baseline gap-2">
+    <span class="text-4xl font-black text-slate-600 tracking-tight">25,000</span>
+    <span class="text-base text-slate-400">文件</span>
+  </div>
+</div>
+
+<div class="mt-10 text-lg text-slate-400" v-click>
   覆盖全局困难，很多小项目和个人项目中不存在的挑战，需要系统化的工程方法
 </div>
 
