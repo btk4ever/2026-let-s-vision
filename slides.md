@@ -102,8 +102,8 @@ layout: new-section
 
 <div class="flex justify-center">
 <div class="text-left space-y-3">
-<p class="!opacity-80 !text-3xl flex items-center"><carbon-map class="text-slate-400 mr-2 text-3xl flex-shrink-0" />我们是怎么走到今天这一步的？</p>
-<p class="!opacity-80 !text-3xl flex items-center"><carbon-compass class="text-slate-400 mr-2 text-3xl flex-shrink-0" />为今后的工程决策定坐标</p>
+<p class="!opacity-60 !text-2xl flex items-center"><carbon-time class="text-slate-400 mr-2 text-2xl flex-shrink-0" />我们是怎么走到今天这一步的？</p>
+<p class="!opacity-80 !text-3xl flex items-center"><carbon-compass class="text-teal-500 mr-2 text-3xl flex-shrink-0" />为今后的工程决策定坐标</p>
 </div>
 </div>
 
@@ -818,53 +818,59 @@ layout: default
 
 ---
 layout: default
+clicks: 4
 ---
 
 # 组织挑战：处理团队断层
 
 <div class="mt-2 text-base opacity-60">实践推广大多是自下而上的——让高手带动团队</div>
 
-<div class="mt-8 flex items-stretch justify-center gap-5">
+<!-- Concentric rings: practice radiates outward from individual to organization -->
+<div class="mt-6 flex items-center justify-center">
+<div class="relative" style="width: 700px; height: 300px;">
 
-<div v-click class="flex-1 rounded-2xl bg-teal-50 border border-teal-200 p-6 shadow-sm flex flex-col items-center justify-center text-center">
-  <carbon-user class="text-4xl mb-3 text-teal-600" />
-  <div class="text-xl font-bold text-teal-800 mb-2">少数高手</div>
-  <div class="text-sm text-teal-600 leading-relaxed">个体实践涌现<br/>效率提升显著</div>
+  <!-- Ring 3: Organization (outermost, appears 3rd) -->
+  <div class="absolute inset-0 rounded-2xl border-2 border-purple-200 bg-purple-50/30 overflow-hidden transition-all duration-500"
+       :class="$clicks >= 3 ? 'opacity-100' : 'opacity-0'">
+    <div class="bg-purple-100/70 px-5 py-2 flex items-center gap-2">
+      <carbon-enterprise class="text-lg text-purple-600" />
+      <span class="font-bold text-purple-800">组织能力</span>
+      <span class="text-sm text-purple-400 ml-auto">对齐拉平 AI 格差 · 制度与工具跟进</span>
+    </div>
+  </div>
+
+  <!-- Ring 2: Team (middle, appears 2nd) -->
+  <div class="absolute rounded-xl border-2 border-emerald-200 bg-emerald-50/40 overflow-hidden transition-all duration-500"
+       style="top: 42px; left: 24px; right: 24px; bottom: 16px;"
+       :class="$clicks >= 2 ? 'opacity-100' : 'opacity-0'">
+    <div class="bg-emerald-100/70 px-5 py-2 flex items-center gap-2">
+      <carbon-events class="text-lg text-emerald-600" />
+      <span class="font-bold text-emerald-800">团队共识</span>
+      <span class="text-sm text-emerald-400 ml-auto">Memory/Skill 可沉淀 · 经验可复用</span>
+    </div>
+  </div>
+
+  <!-- Core: Individual (innermost, appears 1st) -->
+  <div class="absolute rounded-lg bg-teal-50 border-2 border-teal-300 flex flex-col items-center justify-center text-center transition-all duration-500"
+       style="top: 86px; left: 52px; right: 52px; bottom: 34px;"
+       :class="$clicks >= 1 ? 'opacity-100' : 'opacity-0'">
+    <carbon-user class="text-4xl mb-2 text-teal-500" />
+    <div class="text-xl font-bold text-teal-800 mb-1">少数高手</div>
+    <div class="text-sm text-teal-600">个体实践涌现，效率提升显著</div>
+  </div>
+
+</div>
 </div>
 
-<div v-click class="flex items-center flex-shrink-0">
-  <carbon-arrow-right class="text-3xl text-gray-300" />
-</div>
-
-<div v-click class="flex-1 rounded-2xl bg-emerald-50 border border-emerald-200 p-6 shadow-sm flex flex-col items-center justify-center text-center">
-  <carbon-events class="text-4xl mb-3 text-emerald-600" />
-  <div class="text-xl font-bold text-emerald-800 mb-2">团队共识</div>
-  <div class="text-sm text-emerald-600 leading-relaxed">Memory/Skill 可沉淀<br/>经验可分享、可复用</div>
-</div>
-
-<div v-click class="flex items-center flex-shrink-0">
-  <carbon-arrow-right class="text-3xl text-gray-300" />
-</div>
-
-<div v-click class="flex-1 rounded-2xl bg-purple-50 border border-purple-200 p-6 shadow-sm flex flex-col items-center justify-center text-center">
-  <carbon-enterprise class="text-4xl mb-3 text-purple-600" />
-  <div class="text-xl font-bold text-purple-800 mb-2">组织能力</div>
-  <div class="text-sm text-purple-600 leading-relaxed">对齐拉平 AI 格差<br/>制度与工具跟进</div>
-</div>
-
-</div>
-
-<div v-click class="mt-10 mx-auto pl-5 border-l-3 border-teal-300 text-xl opacity-50" style="max-width: 80%;">
+<div v-click="4" class="mt-4 mx-auto pl-5 border-l-3 border-teal-300 text-xl opacity-50" style="max-width: 80%;">
   传统自上而下路径在这个周期里偏慢——等制度跟上，高手已经迭代三轮了
 </div>
 
 <!--
 - 两极分化需组织层面解决
 - [click] 少数高手率先摸索，效率显著提升
-- [click]（过渡箭头）
-- [click] 团队共识：Memory/Skill 沉淀、分享、复用
-- [click]（过渡箭头）
-- [click] 组织能力：对齐拉平 AI 格差
+- [click] 团队共识形成：Memory/Skill 沉淀、分享、复用
+- [click] 扩展到组织能力：对齐拉平 AI 格差
 - [click] 正确路径自下而上：高手先跑 → 沉淀 → 复用 → 制度兜底
 -->
 
@@ -918,9 +924,9 @@ layout: default
 layout: default
 ---
 
-# Memory & Skill 沉淀
+# 沉淀团队资产
 
-<div class="mt-2 text-base opacity-60">Memory 整理沉淀，Skill 分享复用——面向未来的基础建设</div>
+<div class="mt-1 text-base opacity-60">Memory & Skill — 不只应对当下，更面向未来</div>
 
 <div class="mt-6 grid grid-cols-2 gap-6">
 
@@ -930,32 +936,28 @@ layout: default
   <span class="font-bold text-lg">Memory 分层体系</span>
 </div>
 
-<div v-click class="space-y-2">
-  <div class="flex items-stretch gap-2">
+<div v-click class="space-y-3">
+  <div class="flex items-stretch gap-3">
     <div class="w-1 rounded-full bg-teal-600 flex-shrink-0"></div>
-    <div class="flex-1 px-4 py-2.5 rounded-lg bg-teal-50 border border-teal-200">
+    <div class="py-1">
       <div class="font-bold text-teal-800 text-sm">Project Memory</div>
-      <div class="text-xs text-teal-600 mt-0.5">代码风格 · 整体架构 · 技术选型 · 全局共享</div>
+      <div class="text-xs text-teal-600 mt-0.5">架构 · 技术选型 · 代码风格 — 所有 Agent 都读</div>
     </div>
   </div>
-  <div class="flex items-stretch gap-2">
+  <div class="flex items-stretch gap-3">
     <div class="w-1 rounded-full bg-teal-500 flex-shrink-0"></div>
-    <div class="flex-1 px-4 py-2.5 rounded-lg bg-teal-50 border border-teal-200">
+    <div class="py-1">
       <div class="font-bold text-teal-800 text-sm">Module Memory</div>
-      <div class="text-xs text-teal-600 mt-0.5">决策路径 · Spec 变更 · 踩坑记录 · 团队共享</div>
+      <div class="text-xs text-teal-600 mt-0.5">决策路径 · Spec 变更 · 踩坑记录 — 模块内 Agent 聚焦</div>
     </div>
   </div>
-  <div class="flex items-stretch gap-2">
+  <div class="flex items-stretch gap-3">
     <div class="w-1 rounded-full bg-teal-400 flex-shrink-0"></div>
-    <div class="flex-1 px-4 py-2.5 rounded-lg bg-teal-50 border border-teal-200">
+    <div class="py-1">
       <div class="font-bold text-teal-800 text-sm">Personal Memory</div>
-      <div class="text-xs text-teal-600 mt-0.5">个人偏好与习惯 · 默认可见 · 鼓励共享</div>
+      <div class="text-xs text-teal-600 mt-0.5">个人偏好与习惯 — 鼓励共享给团队</div>
     </div>
   </div>
-</div>
-
-<div v-click class="mt-3 text-xs opacity-50 pl-3 leading-relaxed">
-  逐步替代 Wiki → 本地化文档 + 索引<br/>面向未来的基础建设，让 Agent 主动消费知识
 </div>
 </div>
 
@@ -965,24 +967,24 @@ layout: default
   <span class="font-bold text-lg">Skill Marketplace</span>
 </div>
 
-<div v-click class="space-y-2">
-  <div class="flex items-stretch gap-2">
+<div v-click class="space-y-3">
+  <div class="flex items-stretch gap-3">
     <div class="w-1 rounded-full bg-purple-600 flex-shrink-0"></div>
-    <div class="flex-1 px-4 py-2.5 rounded-lg bg-purple-50 border border-purple-200">
+    <div class="py-1">
       <div class="font-bold text-purple-800 text-sm">贡献</div>
       <div class="text-xs text-purple-600 mt-0.5">成员提交 Skill 到内部平台</div>
     </div>
   </div>
-  <div class="flex items-stretch gap-2">
+  <div class="flex items-stretch gap-3">
     <div class="w-1 rounded-full bg-purple-500 flex-shrink-0"></div>
-    <div class="flex-1 px-4 py-2.5 rounded-lg bg-purple-50 border border-purple-200">
+    <div class="py-1">
       <div class="font-bold text-purple-800 text-sm">精选</div>
       <div class="text-xs text-purple-600 mt-0.5">委员会评审，筛选高质量 Skill</div>
     </div>
   </div>
-  <div class="flex items-stretch gap-2">
+  <div class="flex items-stretch gap-3">
     <div class="w-1 rounded-full bg-purple-400 flex-shrink-0"></div>
-    <div class="flex-1 px-4 py-2.5 rounded-lg bg-purple-50 border border-purple-200">
+    <div class="py-1">
       <div class="font-bold text-purple-800 text-sm">共享</div>
       <div class="text-xs text-purple-600 mt-0.5">入选 Skill 合入 Repo，团队直接复用</div>
     </div>
@@ -993,11 +995,12 @@ layout: default
 </div>
 
 <!--
-- 两件事：Memory 沉淀 + Skill 分享
-- [click] Memory：整理决策路径、Spec 记录、踩坑记录
-- [click] 三层：Project（全局）→ Module（模块级）→ Personal（个人，鼓励共享）
-- [click] 现阶段基于 Wiki，方向是本地化文档 + 索引
-- 面向未来基础建设，让 Agent 主动消费知识
+- 高手经验困在个人脑中，怎么让 Agent 也能继承？
+- [click] Memory 分层体系
+- [click] 三层：Project（所有 Agent 都读）→ Module（模块聚焦）→ Personal（鼓励共享）
+- [click] Skill Marketplace
+- [click] 贡献 → 精选 → 共享，流程化管理
+- [click] 目标：每次 Agent 会话都站在团队肩膀上
 - [click] Skill Marketplace：内部共享平台
 - [click] 贡献 → 精选（委员会评审）→ 共享（合入 Repo）
 - Memory 做沉淀，Skill 做分享
@@ -1126,11 +1129,12 @@ layout: default
 
 # 去掉起点：自动触发
 
-<div class="mt-16 text-center">
+<div class="mt-8 text-center">
 
-  <div class="text-3xl font-bold text-slate-700">CI/CD 时代的成熟工具链，直接复用</div>
+  <div class="text-2xl font-bold text-slate-700">CI/CD 时代的成熟工具链，直接复用</div>
+  <div class="text-base text-slate-400 mt-2">起点相对简单——现有基建可直接覆盖</div>
 
-  <div v-click class="mt-12 flex items-start justify-center gap-10">
+  <div v-click class="mt-10 flex items-start justify-center gap-10">
     <div class="text-center">
       <div class="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-teal-50 border border-teal-200">
         <carbon-flash class="text-xl text-teal-500" />
@@ -1154,8 +1158,15 @@ layout: default
     </div>
   </div>
 
-  <div v-click class="mt-14 text-lg text-slate-400">
-    事件发生时 Agent 自动响应——接下来看更关键的<strong class="text-slate-600">终点</strong>
+  <div v-click class="mt-8 flex flex-col items-center gap-3">
+    <carbon-arrow-down class="text-xl text-teal-400" />
+    <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-teal-100 border border-teal-300">
+      <carbon-bot class="text-xl text-teal-600" />
+      <span class="font-bold text-teal-700">Agent 自动响应</span>
+    </div>
+    <div class="mt-3 text-lg text-slate-400">
+      接下来看更关键的<strong class="text-slate-600">终点</strong>
+    </div>
   </div>
 
 </div>
@@ -1203,10 +1214,10 @@ layout: default
 
   <div class="text-center w-28">
     <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center mx-auto">
-      <carbon-camera class="text-3xl text-purple-600" />
+      <carbon-meter class="text-3xl text-purple-600" />
     </div>
-    <div class="font-bold text-sm mt-3 text-slate-700">截图 / 录屏</div>
-    <div class="text-xs text-slate-400 mt-0.5">关键帧捕获</div>
+    <div class="font-bold text-sm mt-3 text-slate-700">捕获证据</div>
+    <div class="text-xs text-slate-400 mt-0.5">截图 · Log · 网络</div>
   </div>
 
   <div class="h-16 flex items-center flex-shrink-0">
@@ -1526,7 +1537,7 @@ layout: default
   <span class="text-sm text-slate-500">Spec 定义 — 人的工作：从 Ticket 到可执行的 Spec</span>
 </div>
 
-<div class="mt-4 grid grid-cols-2 gap-6">
+<div class="mt-4 grid grid-cols-2 gap-6 items-center">
 
 <div class="space-y-4">
   <div class="flex items-start gap-3" v-click>
@@ -1706,14 +1717,14 @@ clicks: 2
 layout: default
 ---
 
-# 早期建设的建议
+# 早期建设的建议 <span class="text-xs font-bold tracking-[0.15em] text-slate-400 bg-slate-100 px-2 py-0.5 rounded uppercase align-middle">Stage 1</span>
 
 <div class="text-base text-slate-400 -mt-2">针对刚起步使用 AI 的个人和团队</div>
 
 <div class="mt-8 space-y-6">
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-right flex-shrink-0">1</span>
+  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-center flex-shrink-0">1</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">挑选靠谱的模型商</div>
     <div class="text-sm text-slate-500 mt-1">完善 API · 稳定 SLA · 关注上下文窗口和工具调用能力 · 企业级先确认合规</div>
@@ -1721,7 +1732,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-right flex-shrink-0">2</span>
+  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-center flex-shrink-0">2</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">大量消耗 Token 做实践</div>
     <div class="text-sm text-slate-500 mt-1">设使用目标而非限制 · A/B 对比建立直觉 · 刻意试探失败边界</div>
@@ -1729,7 +1740,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-right flex-shrink-0">3</span>
+  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-center flex-shrink-0">3</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">将现有工作流迁移到 AI</div>
     <div class="text-sm text-slate-500 mt-1">从重复性工作入手 · 先辅助再主导 · 建立前后效果对照，用数据说服团队</div>
@@ -1737,7 +1748,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-right flex-shrink-0">4</span>
+  <span class="text-[2.5rem] font-black text-teal-300 leading-none w-10 text-center flex-shrink-0">4</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">不要过度纠结工具选型</div>
     <div class="text-sm text-slate-500 mt-1">工具在快速迭代 · 重要的是建立与 AI 协作的思维模式</div>
@@ -1758,14 +1769,14 @@ layout: default
 layout: default
 ---
 
-# 中期建设的建议
+# 中期建设的建议 <span class="text-xs font-bold tracking-[0.15em] text-teal-600 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded uppercase align-middle">Stage 2</span>
 
 <div class="text-base text-slate-400 -mt-2">针对已有实践经验、希望进一步提升的团队</div>
 
 <div class="mt-8 space-y-6">
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-right flex-shrink-0">1</span>
+  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-center flex-shrink-0">1</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">建立团队 Harness 评测体系</div>
     <div class="text-sm text-slate-500 mt-1">自建 benchmark · 评测 → 调优闭环 · domain 知识驱动</div>
@@ -1773,7 +1784,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-right flex-shrink-0">2</span>
+  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-center flex-shrink-0">2</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">团队经验沉淀</div>
     <div class="text-sm text-slate-500 mt-1">prompt/skill 共享 · AI 协作案例库 · 定期分享缩小格差</div>
@@ -1781,7 +1792,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-right flex-shrink-0">3</span>
+  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-center flex-shrink-0">3</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">开始构建验收自动化</div>
     <div class="text-sm text-slate-500 mt-1">核心路径写评估剧本 · 变更 → 验证 → 回归 · 逐步扩大自主验收</div>
@@ -1789,7 +1800,7 @@ layout: default
 </div>
 
 <div class="flex items-start gap-5" v-click>
-  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-right flex-shrink-0">4</span>
+  <span class="text-[2.5rem] font-black text-teal-500 leading-none w-10 text-center flex-shrink-0">4</span>
   <div class="pt-1">
     <div class="text-lg font-bold text-slate-800">让基础设施变得 Agent-friendly</div>
     <div class="text-sm text-slate-500 mt-1">文档从给人看到给 Agent 消费 · 知识结构化 · 工具 CLI/API 化</div>
@@ -1811,18 +1822,20 @@ layout: end
 ---
 
 <div class="text-center">
-  <div class="text-2xl font-bold mb-8">Thank You!</div>
+  <div class="text-sm font-bold text-slate-300 tracking-[0.3em] uppercase mb-8">Thank You</div>
 
-  <div class="flex items-center justify-center gap-6 text-base text-slate-400 mb-10">
+  <div class="flex items-center justify-center gap-5 text-3xl font-black text-white mb-10">
     <span>定义边界</span>
-    <span class="text-teal-400">·</span>
+    <span class="w-1.5 h-1.5 rounded-full bg-teal-500 flex-shrink-0"></span>
     <span>沉淀实践</span>
-    <span class="text-teal-400">·</span>
+    <span class="w-1.5 h-1.5 rounded-full bg-teal-500 flex-shrink-0"></span>
     <span>让 Agent 闭环</span>
   </div>
 
-  <div class="text-base opacity-70 mb-2">Wei Wang</div>
-  <div class="flex items-center justify-center gap-4 text-sm opacity-50">
+  <div class="w-16 h-1 bg-teal-500 rounded-full mx-auto mb-8"></div>
+
+  <div class="text-base opacity-60 mb-1.5">Wei Wang</div>
+  <div class="flex items-center justify-center gap-4 text-sm opacity-40">
     <span><carbon-logo-x class="inline mr-1" />@onevcat</span>
     <span><carbon-logo-github class="inline mr-1" />onevcat</span>
   </div>

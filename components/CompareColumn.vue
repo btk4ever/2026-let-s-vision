@@ -29,19 +29,17 @@ defineProps({
 }
 
 .compare-col.fading {
-  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
-  border: 1px solid #f9a8a8;
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.08);
+  background: #fef2f2;
+  border: 1px solid #fecaca;
 }
 
 .compare-col.rising {
-  background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%);
-  border: 1px solid #86efac;
-  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08);
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
 }
 
 .compare-col.neutral {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: #f8fafc;
   border: 1px solid #e2e8f0;
 }
 
