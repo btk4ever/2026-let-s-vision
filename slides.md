@@ -1271,9 +1271,12 @@ layout: default
 <div class="text-base text-slate-500">先定义"怎么算做完"，再开始做</div>
 
 <!-- ❌ Wrong approach -->
-<div v-click class="mt-8 flex items-center gap-3">
-  <carbon-close-filled class="text-2xl text-red-400 flex-shrink-0" />
-  <span class="text-xl text-red-300 line-through decoration-2">事后生成测试——把实现翻译成测试，人几乎无法验收</span>
+<div v-click class="mt-8 px-5 py-4 rounded-xl bg-red-50/60 flex items-start gap-3">
+  <carbon-close-filled class="text-2xl text-red-400 flex-shrink-0 mt-0.5" />
+  <div>
+    <div class="text-lg font-bold text-red-700">事后生成测试</div>
+    <div class="text-base text-red-400 mt-1">把实现翻译成测试，不验证行为——人几乎无法验收</div>
+  </div>
 </div>
 
 <!-- ✅ Reasoning chain -->
