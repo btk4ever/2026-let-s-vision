@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "slidev --open",
     "build": "slidev build",
-    "export": "slidev export"
+    "export": "slidev export --per-slide",
+    "export:png": "slidev export --format png --output slides"
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.2.8",
@@ -13,5 +14,8 @@
     "@slidev/theme-default": "latest",
     "slidev-theme-penguin": "^2.3.1",
     "vite-svg-loader": "^5.1.0"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.58.2"
   }
 }
