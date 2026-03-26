@@ -178,7 +178,7 @@ clicks: 4
 </div>
 
 <!--
-- 过渡：当前阶段，我们体会到，人逐渐成为瓶颈的瓶颈
+- 过渡：当前阶段，我们体会到，人逐渐成为软件开发的瓶颈
 - [click] 人类线：持续学习积累，但线性增长
 - [click] 模型线：指数增长，Opus 4.5 / Codex 5.2 后感知明显
 - [click] 感知阈值 = 大部分的工程师开始承认 AI 的能力远超自己
@@ -290,7 +290,7 @@ layout: default
     <div class="flex items-baseline gap-2">
       <span class="text-4xl font-black text-slate-300">1%</span>
       <span class="text-xl text-slate-300">→</span>
-      <span class="text-[4.5rem] font-black text-teal-600 leading-none">40%</span>
+      <span class="text-[4.5rem] font-black text-teal-600 leading-none">50%</span>
     </div>
     <div class="mt-1 text-sm text-slate-500">半年内，AI 协作从尝鲜变为常态</div>
   </div>
@@ -298,10 +298,8 @@ layout: default
 </div>
 
 <!--
-- 冲击页：半年内 1% → 40%，近 40 倍增长
-- 左侧大字排版制造视觉冲击
-- 右侧趋势图提供佐证
-- 指数型增长，与模型能力台阶式提升吻合
+- 半年内 1% → 50%，对于大型团队来说是个不错的结果
+- 去年12月开始，指数型增长，与模型能力台阶式提升吻合
 - 从少数人尝鲜变成团队日常
 -->
 
@@ -996,9 +994,9 @@ layout: default
 - [click] 三层：Project（所有 Agent 都读）→ Module（模块聚焦）→ Personal（鼓励共享）
 - [click] Skill Marketplace
 - [click] 贡献 → 精选 → 共享，流程化管理
-- [click] 目标：每次 Agent 会话都站在团队肩膀上
-- [click] Skill Marketplace：内部共享平台
-- [click] 贡献 → 精选（委员会评审）→ 共享（合入 Repo）
+- 目标：每次 Agent 会话都站在团队肩膀上
+- Skill Marketplace：内部共享平台
+- 贡献 → 精选（委员会评审）→ 共享（合入 Repo）
 - Memory 做沉淀，Skill 做分享
 -->
 
