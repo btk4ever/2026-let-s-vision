@@ -829,7 +829,7 @@ clicks: 4
     <div class="bg-purple-100/70 px-5 py-2 flex items-center gap-2">
       <carbon-enterprise class="text-lg text-purple-600" />
       <span class="font-bold text-purple-800">组织能力</span>
-      <span class="text-sm text-purple-400 ml-auto">对齐拉平 AI 格差 · 制度与工具跟进</span>
+      <span class="text-sm text-purple-400 ml-auto">成果可见 · 对齐拉平 AI 格差</span>
     </div>
   </div>
 
@@ -864,7 +864,7 @@ clicks: 4
 - 两极分化需组织层面解决
 - [click] 少数高手率先摸索，效率显著提升
 - [click] 团队共识形成：Memory/Skill 沉淀、分享、复用
-- [click] 扩展到组织能力：对齐拉平 AI 格差
+- [click] 扩展到组织能力：聊天，工单，PR里可见，对齐拉平 AI 格差
 - [click] 正确路径自下而上：高手先跑 → 沉淀 → 复用 → 制度兜底
 -->
 
@@ -1199,7 +1199,7 @@ layout: default
       <carbon-touch-interaction class="text-3xl text-purple-600" />
     </div>
     <div class="font-bold text-sm mt-3 text-slate-700">按剧本操作</div>
-    <div class="text-xs text-slate-400 mt-0.5">a11y · Vision 驱动</div>
+    <div class="text-xs text-slate-400 mt-0.5">a11y 驱动 · Vision 兜底</div>
   </div>
 
   <div class="h-16 flex items-center flex-shrink-0">
@@ -1211,7 +1211,7 @@ layout: default
       <carbon-meter class="text-3xl text-purple-600" />
     </div>
     <div class="font-bold text-sm mt-3 text-slate-700">捕获证据</div>
-    <div class="text-xs text-slate-400 mt-0.5">截图 · Log · 网络</div>
+    <div class="text-xs text-slate-400 mt-0.5">View tree · 截图 · Log</div>
   </div>
 
   <div class="h-16 flex items-center flex-shrink-0">
@@ -1327,7 +1327,7 @@ layout: default
     <div v-click class="flex items-start gap-3">
       <carbon-checkmark-filled class="text-xl text-teal-500 mt-0.5 flex-shrink-0" />
       <div>
-        <div class="font-bold text-lg">BDD 天然贴近自然语言</div>
+        <div class="font-bold text-lg">Spec 测试天然贴近自然语言</div>
         <div class="text-base text-slate-500 mt-1">LLM 做自然语言 → 自然语言的翻译，几乎无损</div>
       </div>
     </div>
@@ -1491,9 +1491,9 @@ layout: default
 <!--
 - 从评估剧本到全自动验收的管线
 - [click] 管线总览：剧本 → Compile → Runner Loop (Operate ↔ Evaluate) → 验收完成
-- [click] 剧本编译：自然语言转为结构化 Tool Calls
-- [click] Simulator 操作：a11y 优先、Vision LLM 兜底
-- [click] Runner 循环：逐步执行 action/eval 对
+- [click] 剧本编译：LLM 自然语言转为结构化 Tool Calls
+- [click] Simulator 操作：Runtime 编排，按照 Tool call调用。a11y 优先、Vision LLM 兜底
+- [click] 执行完后收集证据，交给断言框架
 - [click] 评估框架：确定性 + AI 语义双断言，截图日志作证据
 -->
 
