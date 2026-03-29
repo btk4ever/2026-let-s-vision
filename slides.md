@@ -18,7 +18,7 @@ themeConfig:
 drawings:
   enabled: false
 presenter: true
-download: true
+download: false
 layout: intro
 class: text-center
 ---
